@@ -10,6 +10,7 @@ import hashlib
 import json
 import os
 import tempfile
+import time
 os.environ.setdefault('MPLCONFIGDIR',str(Path(tempfile.gettempdir())/'xmarks-mpl'))
 import matplotlib
 matplotlib.use('Agg')
@@ -25,20 +26,27 @@ from landmarks.planes import pixel_to_world
 from landmarks.transforms import apply_points
 
 
-def infer(images):
+def infer(images,descriptor="polar"):
     """Images/support only. No truth directory, seed, affine or transformation."""
+    from landmarks import mind
+    describe_fn = mind.describe if descriptor == "mind" else describe
     masks={};points={};banks={};usable={};detector={}
     masks['mri']=otsu_mask(images['mri'],images['mri_valid'],True)[0]['cleaned']
     masks['histology']=histology_hysteresis(images['histology'],images['histology_valid'],weak_fraction=.01)[0]['mask']
     for name in ['mri','histology']:
         points[name],detector[name]=detect_candidates(images[name],images[name+'_valid'],masks[name])
-        banks[name],usable[name]=describe(images[name],images[name+'_valid'],points[name][:,:2])
-    scores=similarity(banks['mri'],usable['mri'],banks['histology'],usable['histology'])
+        banks[name],usable[name]=describe_fn(images[name],images[name+'_valid'],points[name][:,:2])
+    choices=None
+    if descriptor == 'mind':
+        scores,choices=mind.similarity(banks['mri'],usable['mri'],banks['histology'],usable['histology'],return_choices=True)
+    else:
+        scores=similarity(banks['mri'],usable['mri'],banks['histology'],usable['histology'])
     mutual,accepted,ratios=propose(scores,max_ratio=.9,min_similarity=.75)
     pa=points['mri'][:,:2];pb=points['histology'][:,:2]
     model,keep,geometry=geometric_filter(pa[accepted[:,0]],pb[accepted[:,1]])
     return dict(points=points,masks=masks,scores=scores,mutual=mutual,accepted=accepted,ratios=ratios,
-        model=model,keep=keep,geometry=geometry,detector=detector)
+        model=model,keep=keep,geometry=geometry,detector=detector,choices=choices,
+        usable_counts={k:int(v.any(axis=tuple(range(1,v.ndim))).sum()) for k,v in usable.items()})
 
 
 def error_mm(pa,pb,reference):
@@ -105,30 +113,35 @@ def show_pair(images,masks,pa,pb,stages,stage_errors,report,path):
         summary=report['stages'][stage]
         fig.text(.5,positions[2*row][1]-.025,f'{len(pairs)} total pairs; {summary["count_within_2mm"]} within 2 mm; {summary["count_within_5mm"]} within 5 mm. Showing {len(display)} highest-score proposals.',ha='center',fontsize=10)
         if not len(pairs): axes[1].text(.5,.5,'No pairs retained\n'+report['geometric_filter']['status'].replace('_',' '),transform=axes[1].transAxes,ha='center',va='center',bbox=dict(facecolor='white',alpha=.95),fontsize=12)
-    fig.suptitle('First end-to-end baseline: proposed pairs → distinctiveness → geometric filtering\nLine colours are EVALUATION ONLY: green ≤2 mm; amber 2–5 mm; red >5 mm.',y=.98,fontsize=13)
+    fig.suptitle(report.get('descriptor','polar')+' descriptor: proposed pairs → distinctiveness → geometric filtering\nLine colours are EVALUATION ONLY: green ≤2 mm; amber 2–5 mm; red >5 mm.',y=.98,fontsize=13)
     fig.text(.5,.015,'Reference alignment is approximate. A geometric inlier is not automatically anatomically correct.\nBigBrain — Amunts et al., Science (2013). CC BY-NC-SA 4.0.',ha='center',fontsize=9)
     fig.savefig(path);plt.close(fig)
 
 
-def run(pair_dir,out):
+def run(pair_dir,out,descriptor="polar"):
+    from landmarks import mind
     path=pair_dir/'inputs.npz';digest=hashlib.sha256(path.read_bytes()).hexdigest()
     with np.load(path) as loaded: images={k:loaded[k] for k in loaded.files}
-    predicted=infer(images)
+    started=time.perf_counter()
+    predicted=infer(images,descriptor)
+    elapsed=time.perf_counter()-started
     out.mkdir(parents=True)
     pa=predicted['points']['mri'][:,:2];pb=predicted['points']['histology'][:,:2]
     stages={'mutual':predicted['mutual'],'distinctive':predicted['accepted'],'retained':predicted['accepted'][predicted['keep']]}
     # Freeze outputs BEFORE opening reference metadata. No oracle-ranked patches.
     np.savez_compressed(out/'predictions.npz',mri_candidates=pa,histology_candidates=pb,
         mutual_pairs=stages['mutual'],distinctive_pairs=stages['distinctive'],retained_pairs=stages['retained'],
-        similarity=predicted['scores'])
-    prediction=dict(detector=predicted['detector'],geometric_filter=predicted['geometry'],
+        similarity=predicted['scores'],
+        **({'best_radius_angle_indices':predicted['choices']} if predicted['choices'] is not None else {}))
+    prediction=dict(descriptor=descriptor,descriptor_config=mind.CONFIG if descriptor=='mind' else None,
+        inference_seconds=elapsed,usable_candidate_counts=predicted['usable_counts'],detector=predicted['detector'],geometric_filter=predicted['geometry'],
         estimated_mri_to_histology=predicted['model'].tolist() if predicted['model'] is not None else None,
         parameters=dict(ratio_max=.9,min_similarity=.75,ransac_residual_histology_px=6.,minimum_consensus=4),
         input_sha256=digest,truth_access='None during inference')
     (out/'prediction.json').write_text(json.dumps(prediction,indent=2))
     reference=json.loads((pair_dir/'truth/geometry.json').read_text())
     evaluation_dir=out/'evaluation';evaluation_dir.mkdir()
-    report=dict(pair_id=pair_dir.name,candidate_counts=dict(mri=len(pa),histology=len(pb)),
+    report=dict(descriptor=descriptor,inference_seconds=elapsed,usable_candidate_counts=predicted['usable_counts'],pair_id=pair_dir.name,candidate_counts=dict(mri=len(pa),histology=len(pb)),
         geometric_filter=predicted['geometry'],stages={},scores_for_plot={},
         scope='Actual independent candidate matches; reference used only after predictions saved',
         caveats=['One specimen and one plane with multiple augmentations, not independent held-out examples',
@@ -171,18 +184,24 @@ def run(pair_dir,out):
     return report
 
 
-def histology_control(output):
+def histology_control(output,descriptor="polar"):
     """Positive control: same descriptor/matcher/RANSAC on two histology images."""
+    from landmarks import mind
+    describe_fn=mind.describe if descriptor=="mind" else describe
+    similarity_fn=mind.similarity if descriptor=="mind" else similarity
     fixed=ROOT/'results/transforms/coronal_y8_demo'
     with np.load(fixed/'truth/original_histology.npz') as d: original=d['image'];ov=d['valid']
     with np.load(fixed/'inputs.npz') as d: transformed=d['histology'];tv=d['histology_valid']
     points=[];banks=[];flags=[]
     for image,valid in [(original,ov),(transformed,tv)]:
         mask=histology_hysteresis(image,valid,weak_fraction=.01)[0]['mask']
-        q,_=detect_candidates(image,valid,mask);bank,usable=describe(image,valid,q[:,:2])
+        q,_=detect_candidates(image,valid,mask);bank,usable=describe_fn(image,valid,q[:,:2])
         points.append(q[:,:2]);banks.append(bank);flags.append(usable)
-    scores=similarity(banks[0],flags[0],banks[1],flags[1])
+    scores=similarity_fn(banks[0],flags[0],banks[1],flags[1])
     mutual,pairs,_=propose(scores);model,keep,status=geometric_filter(points[0][pairs[:,0]],points[1][pairs[:,1]])
+    np.savez_compressed(output/'histology_control_predictions.npz',source_candidates=points[0],target_candidates=points[1],
+        distinctive_pairs=pairs,retained_pairs=pairs[keep],similarity=scores,
+        estimated_model=model if model is not None else np.empty((0,0)))
     reference=json.loads((fixed/'truth/geometry.json').read_text())
     errors=error_mm(points[0][pairs[:,0]],points[1][pairs[:,1]],reference)
     result=dict(scope='Same-modality histology control; independent detections, not oracle locations',
@@ -194,20 +213,27 @@ def histology_control(output):
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output',type=Path,default=ROOT/'results/matching/polar_baseline')
+    parser.add_argument('--descriptor',choices=['polar','mind'],default='polar')
+    parser.add_argument('--output',type=Path)
     args=parser.parse_args()
+    if args.output is None: args.output=ROOT/'results/matching'/('mind_v1' if args.descriptor=='mind' else 'polar_baseline')
     if args.output.exists():raise FileExistsError('Choose a new output directory')
     pairs=[ROOT/'results/transforms/coronal_y8_demo']+sorted((ROOT/'results/random_pairs/y8_seed42').glob('pair_*'))
+    if len(pairs)!=6 or any(not (p/'inputs.npz').is_file() for p in pairs):
+        raise FileNotFoundError('Expected fixed example and exactly five random pairs')
     args.output.mkdir(parents=True)
+    if args.descriptor=='mind':
+        from landmarks.mind import CONFIG
+        (args.output/'experiment_config.json').write_text(json.dumps(CONFIG,indent=2))
     reports=[]
-    for pair in pairs: reports.append(run(pair,args.output/pair.name))
+    for pair in pairs: reports.append(run(pair,args.output/pair.name,args.descriptor))
     with (args.output/'summary.csv').open('w',newline='') as f:
         writer=csv.writer(f);writer.writerow(['pair','mutual','distinctive','retained','retained_within_2mm','retained_within_5mm','status'])
         for r in reports:
             stage=r['stages'];writer.writerow([r['pair_id'],stage['mutual']['count'],stage['distinctive']['count'],stage['retained']['count'],
                 stage['retained']['count_within_2mm'],stage['retained']['count_within_5mm'],r['geometric_filter']['status']])
     (args.output/'summary.json').write_text(json.dumps(reports,indent=2))
-    histology_control(args.output)
+    histology_control(args.output,args.descriptor)
     print('Saved:',args.output)
 
 if __name__=='__main__':main()

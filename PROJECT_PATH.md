@@ -556,3 +556,202 @@ before changing representation or thresholds. End-to-end baseline now exists,
 but project goal of reliable MRI–histology landmark correspondence is NOT met.
 Next: interpret failures, compare one stronger representation/context strategy
 using the same baseline evaluator; do not silently tune thresholds on this batch.
+
+## Current handoff: fixed MIND-style experiment (2026-10-18)
+Linux inputs restored with all three recorded hashes verified; user accepted
+regenerated y=8 pair and fixed/random preparations. Local polar run reproduced
+all documented counts, including 117 correct histology-control matches. User
+reviewed success/failure and authorised the MIND experiment.
+
+Implemented landmarks/mind.py, optional --descriptor mind in the existing
+scripts/run_matching_baseline.py, scripts/review_mind_experiment.py, and four
+MIND test methods. Read MIND_EXPERIMENT.md for fixed parameters, full results,
+limits, output paths and reproduction. No new dependencies or geometry changes.
+26 tests pass. Polar prediction arrays remain exactly equal; candidates and
+usable counts match across methods. Truth remains outside inference; both
+cross-modality and control predictions saved before reference-geometry scoring.
+
+MIND-style v1 is NOT an overall improvement: five of six MRI/histology cases
+still return no consensus. Pair004 retains five pairs, four <=2mm and all five
+<=5mm; polar retains four, all <=2mm. Transform recovery median error worsens
+from .7320 to 1.6524 mm. Histology control falls from 117 to 65 retained pairs,
+all <=2mm. Initial <=2mm mutual proposals improve in five cases but mostly fail
+the unchanged distinctiveness filter. No thresholds were tuned. Results are in
+results/matching/mind_v1; contextual figures and comparison inspected by assistant.
+User review is the next gate, not automatic retuning or another experiment.
+
+## Current handoff: proposal-filter ablation (2026-10-18)
+User identified loss of correct MIND proposals at distinctiveness filtering and
+authorised a three-variant ablation. Implemented landmarks/proposal_ablation.py,
+scripts/run_filter_ablation.py and scripts/review_filter_ablation.py. Read
+FILTER_ABLATION.md for exact setup, results and reproduction.
+
+Saved candidates/scores reused; three variants: current, similarity cutoff only
+(no ratio), all mutual (neither score nor ratio). Existing matcher/defaults,
+RANSAC, seeds and 2/5 mm thresholds unchanged. ALL 42 variant predictions saved
+before ANY reference geometry read. All 14 current models and retained arrays
+reproduce exactly. No-ratio variants identical: every mutual score already >=.75.
+28 tests pass. Input prediction hashes unchanged.
+
+MIND now gets consensus in 4/6 vs1/6 with ratio; no-ratio final <=2mm/total:
+fixed 0/0; 001 5/6; 002 5/5; 003 0/0; 004 11/11; 005 3/4.
+All final pairs <=5mm; pair001 whole-candidate median recovery error 2.126 mm.
+Polar consensus 2/6 vs 1/6: pair004 6/6 and pair005 4/4 within 2 mm.
+Histology controls improve MIND 65->96, polar 117->127, all retained <=2mm.
+Pair004 loses six of eleven correct mutual proposals solely to the ratio test;
+removing it recovers all eleven and improves transform error 1.6524->0.8564 mm.
+This revises the interpretation of MIND under the original filter: ratio
+filtering materially suppressed its useful evidence. No default switch made.
+Results/figures in results/matching/filter_ablation_v1. Assistant inspected
+comparison, ratio audit, and full-image case001/004 figures. Next: user reviews
+this stage; held-out validation/default selection are not yet authorised stages.
+
+## Current handoff: top-3 proposals + relational geometry (2026-10-18)
+User authorised expanded proposals/geometric selection and exhaustive fixed-case
+sampling diagnosis, with SuperGlue as a possible fallback after review. Added
+landmarks/relational.py, scripts/run_relational_experiment.py,
+scripts/review_relational_experiment.py and four relational tests. Read
+RELATIONAL_EXPERIMENT.md for method, attribution of changes, limits and reproduction.
+
+MIND descriptors unchanged. Three fixed variants: previous mutual/no-ratio
+RANSAC; mutual + deterministic geometry solver; source top-3 + same solver.
+New solver uses exhaustive two-proposal similarity hypotheses and one-to-one
+assignment, allowing unmatched sources. Residual <6 target px, min4 and
+noncollinearity preserved; hypothesis fitting changes explicitly, not silently.
+No planted angle/scale/location or source-frame centring enters inference.
+Initial-support pruning is heuristic after refits, not globally optimal matching.
+All 22 predictions saved before ANY reference access; seven seeded controls
+exactly reproduce prior no-ratio models/pairs. Source prediction hashes unchanged.
+32 tests pass, including source/target uniqueness and ambiguous-alternative recovery.
+
+Top3 final <=2mm/total: fixed 8/8; 001 10/11; 002 11/11; 003 9/9;
+004 12/14; 005 10/10. All 63 final pairs <=5mm; 60 <=2mm. Consensus in 6/6.
+Top3 whole-candidate recovery median errors .919/.628/.793/.834/1.201/.758mm.
+Case004 worsens from .856mm despite more matches; no uniform accuracy win.
+Histology control 137/137 correct vs 96/96 mutual. Top1/3/5 partner retrieval
+saved as reference-only diagnostic; top5 not fitted/tuned.
+Exhaustive fixed 3654 triples finds a 4-pair model missed by seeded RANSAC;
+3/4 <=2mm, all 4 <=5 mm, recovery 2.107 mm. Thus sampling AND proposals matter.
+
+Results in results/matching/relational_v1, with full-context matches.png for
+all cases (incorrect INPUT lines shown when method fails; FINAL pairs otherwise),
+comparison.png and retrieval.png. Assistant inspected fixed/003 and summary views.
+No descriptor-context expansion, default switch or SuperGlue run performed.
+Next: review this result with user, then consider freezing/validating new slices.
+
+## Current handoff: two additional slices, preparation review pending (2026-10-18)
+User requested validation on two other slices. Selected y=-20 and y=35 mm before
+matching, using the previous alignment-review planes. Frozen settings, code
+hashes and seed-42 transform parameters saved in
+results/validation/two_slices_v1/study_plan.json before new-slice inference.
+Both 0.2 mm, 631x700 grids extracted; fixed +20deg/1.15x/(40,25) and five
+seed-42 transforms prepared for each (12 cases total). All geometry, clipping,
+source/MRI preservation and replay parameter checks pass. All 32 tests pass.
+No matching/detection/descriptors run on the new slices yet.
+
+Added scripts/review_validation_preparation.py (preparation-only) and
+TWO_SLICE_VALIDATION.md with exact paths/reproduction. Combined review:
+results/validation/two_slices_v1/preparation_review.png. Cyan outlines are
+unchanged provisional MRI Otsu / histology 1% search support, not segmentation
+accuracy or matching predictions. Assistant inspected combined and both random
+batch previews; labels fit and anatomy is not clipped. User visual review is
+pending per AGENTS.md. After review, run the FROZEN top-3/relational pipeline
+on all 12 cases without tuning; predictions must precede reference evaluation.
+These are new slices of the same specimen, not independent subjects.
+
+## Current handoff: two-slice validation completed (2026-10-18)
+User explicitly accepted both new prepared slices (“yes they look good!”).
+Recorded acceptance separately from immutable plan in preparation_user_review.json.
+Added scripts/run_two_slice_validation.py and scripts/review_two_slice_validation.py.
+Frozen model, detector/mask, descriptor, solver configs/hashes match predeclared
+plan. New runner reproduces y=8 fixed candidates/scores/bank choices/pairs/model
+exactly. All 14 new predictions frozen before any reference-geometry scoring.
+No parameters tuned; all source/algorithm hashes unchanged; all 32 tests pass.
+
+All 12 MRI/histology cases returned models. Final <=2mm/total:
+y=-20: fixed 8/8; 001 9/9; 002 8/8; 003 7/7; 004 17/17; 005 11/11.
+y=35: fixed 9/9; 001 15/15; 002 12/12; 003 6/6; 004 18/18; 005 13/13.
+Totals 60/60 and 73/73 (all 133 reference errors <=2mm, max 1.98889 mm).
+Histology controls 89/89 and 128/128 within 2 mm, separate from cross-modality totals.
+Whole-candidate median transform errors .789-1.226mm (-20) and .301-.653 mm (+35).
+Final assignments all unique source/target, noncollinear>=4, score>=.75,
+model residual<6 target pixels. Reference remains approximate; same specimen.
+
+Results: results/validation/two_slices_v1/matching, comparison.png, per-case
+matches.png (incorrect INPUT lines above FINAL pairs), detailed evaluation,
+landmarks CSVs, frozen predictions, provenance and audits. Read updated
+TWO_SLICE_VALIDATION.md for full results/reproduction/coverage limitations.
+Assistant inspected comparison, both fixed matches and -20/pair003 figure.
+Next gate: user review of completed results; no new method or SuperGlue launched.
+
+## Current handoff: boundary stress preparation (2026-10-18)
+User requested one very tough histology transform within existing ranges.
+Predeclared y=8 source, -30deg rotation, .85 scale, (-50,+50)px shift before
+matching; exact existing range boundaries. Saved frozen configs/source hashes
+in results/validation/boundary_stress_v1/study_plan.json. Existing transform
+script generates pair/inputs.npz, preview.png, separate truth/ metadata with
+reduction antialiasing and unclipped883x904 canvas. MRI/source/pipeline unchanged;
+geometry roundtrips pass; all32 tests pass. Assistant inspected preview.
+New transformed image USER VISUAL REVIEW PENDING; no matching has run.
+Read BOUNDARY_STRESS_TEST.md for limits and reproduction. This is a boundary
+case, not guaranteed hardest; -30deg aligns a rotation-bank sample and full
+canvas preserves support. No new flips/crops/noise/nonrigid/tilt introduced.
+After review run frozen top-3 pipeline, freeze prediction before reference score.
+
+## Current handoff: rotation-mismatch stress preparation (2026-10-18)
+User selected a more targeted challenge after clarification that -30deg aligns
+with the descriptor bank: -15deg rotation, .85 scale, (-50,+50)px shift on y=8.
+Predeclared separately in results/validation/rotation_mismatch_stress_v1 before
+matching. Earlier boundary_stress_v1 case preserved. Existing preparation
+uses antialias reduction and an unclipped 793x834 canvas. Full-grid inverse
+error3.41e-13px; world error7.94e-14mm. MRI and frozen pipeline unchanged;
+all32 tests pass. Assistant inspected preview: anatomy fits and labels readable.
+User review of this NEW transformed preview pending; matching has NOT run.
+After review, run frozen MIND top-3/relational, save predictions before reference
+scoring with unchanged 2/5mm evaluator. Half-step mismatch is targeted difficulty,
+not proof this is the worst transformation in the permitted range.
+
+## Current handoff: rotation-mismatch stress completed (2026-10-18)
+User accepted -15deg/.85/(-50,+50)px y=8 preview and said “looks good execute”.
+Recorded acceptance with exact preview hash. Added scripts/run_stress_test.py
+and scripts/review_stress_test.py, reusing unchanged infer_frozen and evaluator.
+All algorithm/input hashes and thresholds preserved; BOTH stress/control
+predictions saved before ANY reference geometry opened. No tuning/replacement.
+
+MRI/histology: 258 proposals, 12 <=2mm; final 11/11 <=2mm (maximum 1.5895mm),
+median pair error .9190mm. Whole-MRI-candidate median recovery .5700mm;
+rotation absolute error .4308deg; scale error .009066; hull-area/mask-area .6315.
+Histology control 117/117 <=2mm, median pair error .1751mm; recovery .06338mm.
+All final pair uniqueness, noncollinearity, score>=.75 and residual<6px checks
+pass; all 32 existing tests pass. This one targeted mismatch/shrinkage case
+passed, not a worst-case or universal success guarantee. -30deg case untested.
+
+Results: results/validation/rotation_mismatch_stress_v1/matching, including
+stress/matches.png and histology_control/matches.png (incorrect input lines
+above final matches), predictions, provenance, evaluation and CSV exports.
+Both figures inspected by assistant. Updated BOUNDARY_STRESS_TEST.md records
+reproduction/limitations. Next gate is user result review; no automatic new test.
+
+## Current handoff: complete CSV and success-metric release (2026-10-18)
+User requested standard one-CSV-per-pair output and success metrics for all tests.
+Added scripts/export_all_landmarks.py and two export regression tests. Exporter
+reads saved predictions/evaluations ONLY, no matching/refitting/threshold changes.
+Independent direct-matrix roundtrip verifies every exported coordinate, target
+pixel, score and reference error. All 34 tests pass; zip inventory/CRC/bytes pass.
+
+Complete release: results/exports/landmark_release_v1 and .zip. 19 final-pipeline
+MRI/histology CSVs use exact requested 8-column schema; 67 historical variants
+and 14 histology-only controls are separate. 100 saved prediction artifacts covered;
+34 existing CSVs reused after validation. 41 no-consensus cases have header-only
+CSVs, null precision/errors. 47 identical prediction records flagged, not counted
+as new cases. Legacy original polar control lacks frozen coordinates; verified
+backend replay is labelled as an alias. Prepared -30deg case was never matched.
+
+Final-pipeline totals: 204/207 <=2mm; 207/207 <=5mm. Count-weighted random means
+.3454% /1.2367%; all 19 cases have >=4 noncollinear correct pairs. Three source
+planes, same specimen, repeated transforms. Metrics include fractions, chance,
+spread, planted/estimated angles/scales and recovery errors. Saved metrics
+verified; missing legacy-control random metrics added from frozen pools only.
+Read OUTPUTS.md or package README.md. Start final_pipeline_summary.csv; use
+all_tests_summary.csv for full historical inventory and manifest.json provenance.
+Controls correctly name original-histology coordinates rather than MRI.

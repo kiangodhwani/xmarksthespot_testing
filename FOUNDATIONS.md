@@ -197,3 +197,46 @@ misleading 100% precision on empty outputs. Label oracle-patch tests separately
 from actual detected-candidate matching. Reference-conditioned point geometry
 is used ONLY to score and colour lines, not to select matches or fit the model.
 Report failures across all random cases, not just the one successful example.
+
+## MIND-style comparison status
+One fixed sparse 2D self-similarity adaptation is implemented; see
+MIND_EXPERIMENT.md for exact method and limitations. It is not original dense
+3D MIND/MIND-SSC. Keep rotation sampling angles distinct from recovered transform
+angles. All 3x3 radius pairs and 12 rotations are searched without planted scale,
+orientation or affine. Gaussian prefilter and interpolation support are validated.
+More reference-correct initial proposals did not improve final <=2mm matching.
+Benchmark thresholds and evaluator remain unchanged. Review before retuning;
+score distributions across descriptors are not calibrated equivalently.
+
+## Proposal-filter ablation update
+User-authorised ablation shows ratio filtering discards useful MIND evidence:
+removing only ratio increases model returns 1/6->4/6 on the same reviewed batch.
+See FILTER_ABLATION.md. Score>=.75 removes no mutual proposals here, so no-ratio
+and all-mutual variants coincide. Keep original default intact pending review.
+All variants freeze predictions before reference scoring. Additional consensus
+is assessed via pair errors, coverage AND whole-field transform recovery; e.g.
+pair001 retained pairs look good but median candidate-field error remains 2.126 mm.
+This is exploratory reuse of one slice, not held-out performance validation.
+
+## Expanded proposals and relational selection
+Fixed source top-3 MIND alternatives plus one-to-one similarity consensus now
+returns models in all 6/6 augmentations; see RELATIONAL_EXPERIMENT.md. This is
+new hypothesis/assignment logic with the same residual/minimum-support thresholds,
+not unchanged RANSAC. Keep source/target uniqueness: alternatives are hypotheses,
+not independent landmarks. Rank metrics count each source once. Input many-to-many
+proposal counts cannot use the baseline unique-pair random sampler; final
+one-to-one pairs retain that comparator. Pruning is heuristic, not global proof.
+All predictions precede reference evaluation; diagnostic expected locations never
+enter candidate galleries. Case004 recovery degrades despite extra matches;
+review full-field error as well as pair counts. Single-slice validation remains.
+
+## Two additional slices tested with frozen settings
+After user accepted preparation, y=-20 and y=35 mm were evaluated with the
+unchanged top-3 MIND/relational pipeline. All 12 cases return models; all 133
+retained cross-modality pairs are within 2 mm of reference. See
+TWO_SLICE_VALIDATION.md for controls, recovery/coverage, provenance and scope.
+This extends evidence to two new anatomical planes, still one specimen and the
+same transform settings. Do not equate retained-pair accuracy with dense image
+accuracy or verified anatomy. Convex-hull area divided by mask area is a spread
+ratio that may exceed 1, not a bounded tissue-coverage fraction. All predictions
+precede reference evaluation; no thresholds/settings tuned to these slices.
