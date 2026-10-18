@@ -1,0 +1,22 @@
+# Data and outputs stay out of git (BigBrain is CC BY-NC-SA; volumes are large)
+data/*
+!data/.gitkeep
+results/*
+!results/.gitkeep
+*.nii
+*.nii.gz
+*.mnc
+*.npy
+*.npz
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Machine-specific files
+.DS_Store
+.idea/
+.cache/
