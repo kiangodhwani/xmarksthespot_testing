@@ -1,0 +1,263 @@
+[
+  {
+    "source_index": 0,
+    "target_index": 37,
+    "similarity": 0.9333720803260803,
+    "distance_ratio": 0.8341407334093582,
+    "ratio_defined": true,
+    "passes_ratio": true,
+    "passes_similarity": true
+  },
+  {
+    "source_index": 1,
+    "target_index": 29,
+    "similarity": 0.9624195694923401,
+    "distance_ratio": 0.833731417248021,
+    "ratio_defined": true,
+    "passes_ratio": true,
+    "passes_similarity": true
+  },
+  {
+    "source_index": 7,
+    "target_index": 12,
+    "similarity": 0.9442518353462219,
+    "distance_ratio": 0.9409447469973897,
+    "ratio_defined": true,
+    "passes_ratio": false,
+    "passes_similarity": true
+  },
+  {
+    "source_index": 8,
+    "target_index": 144,
+    "similarity": 0.9398359656333923,
+    "distance_ratio": 0.8996049596432755,
+    "ratio_defined": true,
+    "passes_ratio": true,
+    "passes_similarity": true
+  },
+  {
+    "source_index": 14,
+    "target_index": 39,
+    "similarity": 0.9623544216156006,
+    "distance_ratio": 0.962600518046009,
+    "ratio_defined": true,
+    "passes_ratio": false,
+    "passes_similarity": true
+  },
+  {
+    "source_index": 17,
+    "target_index": 165,
+    "similarity": 0.9395923614501953,
+    "distance_ratio": 0.8799203326284634,
+    "ratio_defined": true,
+    "passes_ratio": true,
+    "passes_similarity": true
+  },
+  {
+    "source_index": 20,
+    "target_index": 82,
+    "similarity": 0.948853075504303,
+    "distance_ratio": 0.9847050653997487,
+    "ratio_defined": true,
+    "passes_ratio": false,
+    "passes_similarity": true
+  },
+  {
+    "source_index": 21,
+    "target_index": 46,
+    "similarity": 0.891097366809845,
+    "distance_ratio": 0.9778975148397623,
+    "ratio_defined": true,
+    "passes_ratio": false,
+    "passes_similarity": true
+  },
+  {
+    "source_index": 22,
+    "target_index": 14,
+    "similarity": 0.8645306825637817,
+    "distance_ratio": 0.8921025397871164,
+    "ratio_defined": true,
+    "passes_ratio": true,
+    "passes_similarity": true
+  },
+  {
+    "source_index": 23,
+    "target_index": 113,
+    "similarity": 0.8987887501716614,
+    "distance_ratio": 0.9575714838300837,
+    "ratio_defined": true,
+    "passes_ratio": false,
+    "passes_similarity": true
+  },
+  {
+    "source_index": 26,
+    "target_index": 33,
+    "similarity": 0.8714962005615234,
+    "distance_ratio": 0.9617858375752917,
+    "ratio_defined": true,
+    "passes_ratio": false,
+    "passes_similarity": true
+  },
+  {
+    "source_index": 29,
+    "target_index": 98,
+    "similarity": 0.9503235220909119,
+    "distance_ratio": 0.9253712457598616,
+    "ratio_defined": true,
+    "passes_ratio": false,
+    "passes_similarity": true
+  },
+  {
+    "source_index": 30,
+    "target_index": 42,
+    "similarity": 0.893336832523346,
+    "distance_ratio": 0.9836380542186334,
+    "ratio_defined": true,
+    "passes_ratio": false,
+    "passes_similarity": true
+  },
+  {
+    "source_index": 31,
+    "target_index": 149,
+    "similarity": 0.9617853760719299,
+    "distance_ratio": 0.7526581429458401,
+    "ratio_defined": true,
+    "passes_ratio": true,
+    "passes_similarity": true
+  },
+  {
+    "source_index": 34,
+    "target_index": 176,
+    "similarity": 0.9735777378082275,
+    "distance_ratio": 0.8491920545350815,
+    "ratio_defined": true,
+    "passes_ratio": true,
+    "passes_similarity": true
+  },
+  {
+    "source_index": 35,
+    "target_index": 62,
+    "similarity": 0.9051403999328613,
+    "distance_ratio": 0.8267115121740634,
+    "ratio_defined": true,
+    "passes_ratio": true,
+    "passes_similarity": true
+  },
+  {
+    "source_index": 37,
+    "target_index": 57,
+    "similarity": 0.9035559892654419,
+    "distance_ratio": 0.9993230255256561,
+    "ratio_defined": true,
+    "passes_ratio": false,
+    "passes_similarity": true
+  },
+  {
+    "source_index": 42,
+    "target_index": 58,
+    "similarity": 0.9039801955223083,
+    "distance_ratio": 0.9543277543426266,
+    "ratio_defined": true,
+    "passes_ratio": false,
+    "passes_similarity": true
+  },
+  {
+    "source_index": 43,
+    "target_index": 156,
+    "similarity": 0.9406551122665405,
+    "distance_ratio": 0.9430546042863278,
+    "ratio_defined": true,
+    "passes_ratio": false,
+    "passes_similarity": true
+  },
+  {
+    "source_index": 45,
+    "target_index": 43,
+    "similarity": 0.8893500566482544,
+    "distance_ratio": 0.9764542521988242,
+    "ratio_defined": true,
+    "passes_ratio": false,
+    "passes_similarity": true
+  },
+  {
+    "source_index": 48,
+    "target_index": 28,
+    "similarity": 0.8828061819076538,
+    "distance_ratio": 0.9297614276653067,
+    "ratio_defined": true,
+    "passes_ratio": false,
+    "passes_similarity": true
+  },
+  {
+    "source_index": 52,
+    "target_index": 74,
+    "similarity": 0.8770251274108887,
+    "distance_ratio": 0.9912419878830946,
+    "ratio_defined": true,
+    "passes_ratio": false,
+    "passes_similarity": true
+  },
+  {
+    "source_index": 53,
+    "target_index": 45,
+    "similarity": 0.8859363794326782,
+    "distance_ratio": 0.9144807686283332,
+    "ratio_defined": true,
+    "passes_ratio": false,
+    "passes_similarity": true
+  },
+  {
+    "source_index": 60,
+    "target_index": 150,
+    "similarity": 0.8954994082450867,
+    "distance_ratio": 0.9249702933806409,
+    "ratio_defined": true,
+    "passes_ratio": false,
+    "passes_similarity": true
+  },
+  {
+    "source_index": 63,
+    "target_index": 94,
+    "similarity": 0.9549437165260315,
+    "distance_ratio": 0.9552759793367572,
+    "ratio_defined": true,
+    "passes_ratio": false,
+    "passes_similarity": true
+  },
+  {
+    "source_index": 72,
+    "target_index": 164,
+    "similarity": 0.8687190413475037,
+    "distance_ratio": 0.9313728333481215,
+    "ratio_defined": true,
+    "passes_ratio": false,
+    "passes_similarity": true
+  },
+  {
+    "source_index": 79,
+    "target_index": 83,
+    "similarity": 0.8652206063270569,
+    "distance_ratio": 0.9929832538507527,
+    "ratio_defined": true,
+    "passes_ratio": false,
+    "passes_similarity": true
+  },
+  {
+    "source_index": 80,
+    "target_index": 97,
+    "similarity": 0.9279664158821106,
+    "distance_ratio": 0.9212606682261733,
+    "ratio_defined": true,
+    "passes_ratio": false,
+    "passes_similarity": true
+  },
+  {
+    "source_index": 84,
+    "target_index": 174,
+    "similarity": 0.8931814432144165,
+    "distance_ratio": 0.8901006385994809,
+    "ratio_defined": true,
+    "passes_ratio": true,
+    "passes_similarity": true
+  }
+]

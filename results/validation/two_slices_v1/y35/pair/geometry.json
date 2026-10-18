@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "plane": "coronal",
+  "y_mm": 35.0,
+  "spacing_mm": 0.2,
+  "shape_rows_cols": [
+    631,
+    700
+  ],
+  "pixel_point_order": [
+    "col",
+    "row"
+  ],
+  "array_index_order": [
+    "row",
+    "col"
+  ],
+  "pixel_centres_to_world_ras_mm": [
+    [
+      0.2,
+      0.0,
+      -70.8
+    ],
+    [
+      0.0,
+      0.0,
+      35.0
+    ],
+    [
+      0.0,
+      -0.2,
+      67.2
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "inverse_formula": "col=(x-matrix[0,2])/matrix[0,0]; row=(z-matrix[2,2])/matrix[2,1]; requires y=y_mm",
+  "field_of_view": "Union of source voxel-centre bounds, expanded to 0.2 mm grid",
+  "interpolation": "Trilinear; no downsampling; upsampled MRI contains no new anatomical information",
+  "validity": "Inside source interpolation domain; not a tissue mask",
+  "sources": {
+    "mri": {
+      "file": "mri_to_blk_aligned.nii.gz",
+      "sha256": "098edc7b3a787890c39f12fb8fe31e6eaca703b341fd60ef6c653e0e269cf691",
+      "shape": [
+        315,
+        362,
+        284
+      ],
+      "affine": [
+        [
+          0.4444444477558136,
+          0.0,
+          0.0,
+          -70.6666030883789
+        ],
+        [
+          0.0,
+          0.4444444477558136,
+          0.0,
+          -71.56999969482422
+        ],
+        [
+          0.0,
+          0.0,
+          0.4444444477558136,
+          -58.7776985168457
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "spacing_mm": [
+        0.4444444477558136,
+        0.4444444477558136,
+        0.4444444477558136
+      ],
+      "slope": 1.0,
+      "intercept": 0.0,
+      "scaled_intensity_range": [
+        0.0,
+        249.88084411621094
+      ],
+      "valid_fraction": 0.9939823409553996
+    },
+    "histology": {
+      "file": "full8_200um_optbal.nii.gz",
+      "sha256": "69f19eb044d23a09c0c316e8ce985fcd6822914d19ac0ec36e72aa8e03026bef",
+      "shape": [
+        696,
+        770,
+        605
+      ],
+      "affine": [
+        [
+          0.20000000298023224,
+          0.0,
+          0.0,
+          -70.6666030883789
+        ],
+        [
+          0.0,
+          0.20000000298023224,
+          0.0,
+          -72.91000366210938
+        ],
+        [
+          0.0,
+          0.0,
+          0.20000000298023224,
+          -58.7776985168457
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "spacing_mm": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ],
+      "slope": 257.0,
+      "intercept": 0.0,
+      "scaled_intensity_range": [
+        0.0,
+        65535.0
+      ],
+      "valid_fraction": 0.950373556712701
+    }
+  },
+  "versions": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "nibabel": "5.4.2"
+  },
+  "checks": {
+    "max_pixel_roundtrip_error": 7.105427357601002e-15,
+    "shared_plane": true,
+    "shared_grid": true
+  },
+  "reference_alignment": "Preliminary review accepted by user; residual anatomical uncertainty remains; no global 2 mm guarantee",
+  "transform": "None",
+  "attribution": "BigBrain: Amunts et al., Science 2013; CC BY-NC-SA 4.0"
+}

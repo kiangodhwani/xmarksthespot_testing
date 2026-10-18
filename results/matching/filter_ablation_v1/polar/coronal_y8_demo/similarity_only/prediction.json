@@ -1,0 +1,15 @@
+{
+  "variant": "similarity_only",
+  "description": "Mutual + cosine >=0.75; no ratio test",
+  "geometric_filter": {
+    "status": "insufficient_consensus",
+    "minimum_consensus": 4,
+    "residual_threshold_histology_px": 6.0,
+    "seed": 0,
+    "max_trials": 5000,
+    "raw_consensus": 3
+  },
+  "ransac_seconds": 0.24464704599995457,
+  "source_prediction_sha256": "55e87de41ed39cec402a8d8bebea0a6c999feb47f05c9e0646041235f5bbf7cf",
+  "truth_access": "None before predictions saved"
+}

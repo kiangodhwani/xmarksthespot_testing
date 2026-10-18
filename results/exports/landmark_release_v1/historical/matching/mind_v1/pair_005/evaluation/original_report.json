@@ -1,0 +1,82 @@
+{
+  "descriptor": "mind",
+  "inference_seconds": 3.812830460999976,
+  "usable_candidate_counts": {
+    "mri": 86,
+    "histology": 180
+  },
+  "pair_id": "pair_005",
+  "candidate_counts": {
+    "mri": 86,
+    "histology": 180
+  },
+  "geometric_filter": {
+    "status": "insufficient_consensus",
+    "minimum_consensus": 4,
+    "residual_threshold_histology_px": 6.0,
+    "seed": 0,
+    "max_trials": 5000,
+    "raw_consensus": 0
+  },
+  "stages": {
+    "mutual": {
+      "count": 29,
+      "count_within_2mm": 5,
+      "count_within_5mm": 7,
+      "fraction_within_2mm": 0.1724137931034483,
+      "fraction_within_5mm": 0.2413793103448276,
+      "median_error_mm": 52.585387805601535,
+      "correct_within_2mm_spread": {
+        "hull_area_mm2": 2786.0799999999995,
+        "minor_major_spread_ratio": 0.37675488246037636
+      },
+      "correct_hull_fraction_of_mri_mask_area": 0.33887980694379555,
+      "random_candidate_pairing": {
+        "trials": 200,
+        "mean_within_2mm": 0.0022413793103448275,
+        "mean_within_5mm": 0.011551724137931036,
+        "note": "Same count, independent unique candidate pairing; not a null distribution conditioned on RANSAC selection"
+      }
+    },
+    "distinctive": {
+      "count": 4,
+      "count_within_2mm": 0,
+      "count_within_5mm": 0,
+      "fraction_within_2mm": 0.0,
+      "fraction_within_5mm": 0.0,
+      "median_error_mm": 76.53353843270531,
+      "correct_within_2mm_spread": {
+        "hull_area_mm2": 0.0,
+        "minor_major_spread_ratio": 0.0
+      },
+      "correct_hull_fraction_of_mri_mask_area": 0.0,
+      "random_candidate_pairing": {
+        "trials": 200,
+        "mean_within_2mm": 0.005,
+        "mean_within_5mm": 0.0125,
+        "note": "Same count, independent unique candidate pairing; not a null distribution conditioned on RANSAC selection"
+      }
+    },
+    "retained": {
+      "count": 0,
+      "count_within_2mm": 0,
+      "count_within_5mm": 0,
+      "fraction_within_2mm": null,
+      "fraction_within_5mm": null,
+      "median_error_mm": null,
+      "correct_within_2mm_spread": {
+        "hull_area_mm2": 0.0,
+        "minor_major_spread_ratio": 0.0
+      },
+      "correct_hull_fraction_of_mri_mask_area": 0.0,
+      "random_candidate_pairing": null
+    }
+  },
+  "scope": "Actual independent candidate matches; reference used only after predictions saved",
+  "caveats": [
+    "One specimen and one plane with multiple augmentations, not independent held-out examples",
+    "Reference alignment approximate; errors are reference-coordinate errors, not verified anatomical truth",
+    "Fixed thresholds not tuned on evaluation; baseline may produce no final pairs"
+  ],
+  "transform_recovery": null
+}

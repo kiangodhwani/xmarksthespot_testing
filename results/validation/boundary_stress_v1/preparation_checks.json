@@ -1,0 +1,14 @@
+{
+  "status": "numerically_checked_user_visual_review_pending",
+  "matching_run": false,
+  "requested_parameters_verified": true,
+  "antialias_sigma_source_px": 0.3098721692015512,
+  "geometry_checks": {
+    "full_grid_roundtrip_max_px": 2.2737367544323206e-13,
+    "full_grid_world_roundtrip_max_mm": 7.105427357601002e-14,
+    "no_footprint_clipping": true
+  },
+  "mri_unchanged": true,
+  "pipeline_unchanged": true,
+  "tests_passed": 32
+}

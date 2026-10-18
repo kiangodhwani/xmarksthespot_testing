@@ -1,0 +1,39 @@
+{
+  "variant": "current",
+  "description": "Mutual + cosine >=0.75 + distance ratio <0.9",
+  "geometric_filter": {
+    "status": "estimated_model_not_anatomically_verified",
+    "minimum_consensus": 4,
+    "residual_threshold_histology_px": 6.0,
+    "seed": 0,
+    "max_trials": 5000,
+    "raw_consensus": 4,
+    "retained": 4,
+    "scale": 0.9751743145582044,
+    "clockwise_degrees": -3.6740222950340575,
+    "translation_col_row_px": [
+      8.16943312360334,
+      134.83104225079165
+    ],
+    "matrix": [
+      [
+        0.9731701113647789,
+        0.06248902399883734,
+        8.16943312360334
+      ],
+      [
+        -0.062489023998837295,
+        0.9731701113647789,
+        134.83104225079165
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "ransac_seconds": 0.0019022830001631519,
+  "source_prediction_sha256": "f369c34d30e740ef57f4453ea129996d6f6f59fcdafe84d8e6c064aedec4dec4",
+  "truth_access": "None before predictions saved"
+}

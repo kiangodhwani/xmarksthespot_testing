@@ -1,0 +1,109 @@
+{
+  "detector": {
+    "mri": {
+      "count": 86,
+      "per_scale": [
+        {
+          "sigma_px": 2.0,
+          "peaks": 69
+        },
+        {
+          "sigma_px": 4.0,
+          "peaks": 45
+        },
+        {
+          "sigma_px": 8.0,
+          "peaks": 20
+        }
+      ],
+      "occupied_tiles": 29,
+      "scales_px": [
+        2.0,
+        4.0,
+        8.0
+      ],
+      "max_points": 180,
+      "min_spacing_px": 8.0,
+      "threshold_rel": 0.01,
+      "tile_grid": [
+        6,
+        6
+      ],
+      "per_tile_limit": 10,
+      "normalisation_percentiles": [
+        0.0,
+        212.98072494506832
+      ],
+      "columns": [
+        "col_px",
+        "row_px",
+        "relative_response",
+        "sigma_px",
+        "tile_id"
+      ],
+      "border_policy": "Exclude detector footprint near invalid support/image edges; tissue mask only filters candidate centres",
+      "limitation": "Multiscale baseline; not intrinsically scale invariant, anatomically labelled, or cross-modality validated"
+    },
+    "histology": {
+      "count": 177,
+      "per_scale": [
+        {
+          "sigma_px": 2.0,
+          "peaks": 149
+        },
+        {
+          "sigma_px": 4.0,
+          "peaks": 102
+        },
+        {
+          "sigma_px": 8.0,
+          "peaks": 48
+        }
+      ],
+      "occupied_tiles": 32,
+      "scales_px": [
+        2.0,
+        4.0,
+        8.0
+      ],
+      "max_points": 180,
+      "min_spacing_px": 8.0,
+      "threshold_rel": 0.01,
+      "tile_grid": [
+        6,
+        6
+      ],
+      "per_tile_limit": 10,
+      "normalisation_percentiles": [
+        37718.69082974225,
+        65534.99999999999
+      ],
+      "columns": [
+        "col_px",
+        "row_px",
+        "relative_response",
+        "sigma_px",
+        "tile_id"
+      ],
+      "border_policy": "Exclude detector footprint near invalid support/image edges; tissue mask only filters candidate centres",
+      "limitation": "Multiscale baseline; not intrinsically scale invariant, anatomically labelled, or cross-modality validated"
+    }
+  },
+  "geometric_filter": {
+    "status": "insufficient_consensus",
+    "minimum_consensus": 4,
+    "residual_threshold_histology_px": 6.0,
+    "seed": 0,
+    "max_trials": 5000,
+    "raw_consensus": 1
+  },
+  "estimated_mri_to_histology": null,
+  "parameters": {
+    "ratio_max": 0.9,
+    "min_similarity": 0.75,
+    "ransac_residual_histology_px": 6.0,
+    "minimum_consensus": 4
+  },
+  "input_sha256": "fd949b51e8a0fe04105feab1f873a9a3601aed16b37babb4c70fc08a221eb135",
+  "truth_access": "None during inference"
+}

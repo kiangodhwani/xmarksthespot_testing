@@ -1,0 +1,15 @@
+{
+  "variant": "all_mutual",
+  "description": "All valid mutual nearest neighbours; no score or ratio cutoff",
+  "geometric_filter": {
+    "status": "insufficient_consensus",
+    "minimum_consensus": 4,
+    "residual_threshold_histology_px": 6.0,
+    "seed": 0,
+    "max_trials": 5000,
+    "raw_consensus": 3
+  },
+  "ransac_seconds": 0.24344708099852141,
+  "source_prediction_sha256": "590bd693ad2ef7ecef070e9520998760a22d7eda902873ae233ec41ab74060b8",
+  "truth_access": "None before predictions saved"
+}

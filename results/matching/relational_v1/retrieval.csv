@@ -1,0 +1,8 @@
+case,source_candidates,target_candidates,sources_with_any_target_within_2mm,sources_with_score_eligible_target_within_2mm,top1_sources_with_partner_within_2mm,top3_sources_with_partner_within_2mm,top5_sources_with_partner_within_2mm,sources_with_any_target_within_5mm,sources_with_score_eligible_target_within_5mm,top1_sources_with_partner_within_5mm,top3_sources_with_partner_within_5mm,top5_sources_with_partner_within_5mm
+coronal_y8_demo,86,180,41,41,7,12,16,78,78,10,15,23
+pair_001,86,180,44,44,8,15,16,79,79,10,22,25
+pair_002,86,177,36,36,7,12,15,81,81,12,22,31
+pair_003,86,180,42,42,5,11,14,77,77,6,15,22
+pair_004,86,180,40,40,14,17,19,80,80,17,23,25
+pair_005,86,180,40,40,9,14,19,78,78,13,21,30
+histology_control,180,180,158,158,114,140,147,176,176,115,143,150

@@ -1,0 +1,117 @@
+{
+  "descriptor": "polar",
+  "inference_seconds": 0.6172793839996302,
+  "usable_candidate_counts": {
+    "mri": 86,
+    "histology": 180
+  },
+  "pair_id": "pair_004",
+  "candidate_counts": {
+    "mri": 86,
+    "histology": 180
+  },
+  "geometric_filter": {
+    "status": "estimated_model_not_anatomically_verified",
+    "minimum_consensus": 4,
+    "residual_threshold_histology_px": 6.0,
+    "seed": 0,
+    "max_trials": 5000,
+    "raw_consensus": 4,
+    "retained": 4,
+    "scale": 0.9751743145582044,
+    "clockwise_degrees": -3.6740222950340575,
+    "translation_col_row_px": [
+      8.16943312360334,
+      134.83104225079165
+    ],
+    "matrix": [
+      [
+        0.9731701113647789,
+        0.06248902399883734,
+        8.16943312360334
+      ],
+      [
+        -0.062489023998837295,
+        0.9731701113647789,
+        134.83104225079165
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "stages": {
+    "mutual": {
+      "count": 35,
+      "count_within_2mm": 7,
+      "count_within_5mm": 7,
+      "fraction_within_2mm": 0.2,
+      "fraction_within_5mm": 0.2,
+      "median_error_mm": 42.712727633842576,
+      "correct_within_2mm_spread": {
+        "hull_area_mm2": 2801.2000000000007,
+        "minor_major_spread_ratio": 0.4578621783642536
+      },
+      "correct_hull_fraction_of_mri_mask_area": 0.3407189008251596,
+      "random_candidate_pairing": {
+        "trials": 200,
+        "mean_within_2mm": 0.0021428571428571425,
+        "mean_within_5mm": 0.010857142857142857,
+        "note": "Same count, independent unique candidate pairing; not a null distribution conditioned on RANSAC selection"
+      }
+    },
+    "distinctive": {
+      "count": 7,
+      "count_within_2mm": 4,
+      "count_within_5mm": 4,
+      "fraction_within_2mm": 0.5714285714285714,
+      "fraction_within_5mm": 0.5714285714285714,
+      "median_error_mm": 1.3804620732306108,
+      "correct_within_2mm_spread": {
+        "hull_area_mm2": 1025.7600000000002,
+        "minor_major_spread_ratio": 0.1967075833455877
+      },
+      "correct_hull_fraction_of_mri_mask_area": 0.12476646426903315,
+      "random_candidate_pairing": {
+        "trials": 200,
+        "mean_within_2mm": 0.004999999999999999,
+        "mean_within_5mm": 0.011428571428571429,
+        "note": "Same count, independent unique candidate pairing; not a null distribution conditioned on RANSAC selection"
+      }
+    },
+    "retained": {
+      "count": 4,
+      "count_within_2mm": 4,
+      "count_within_5mm": 4,
+      "fraction_within_2mm": 1.0,
+      "fraction_within_5mm": 1.0,
+      "median_error_mm": 0.9683761150865617,
+      "correct_within_2mm_spread": {
+        "hull_area_mm2": 1025.7600000000002,
+        "minor_major_spread_ratio": 0.1967075833455877
+      },
+      "correct_hull_fraction_of_mri_mask_area": 0.12476646426903315,
+      "random_candidate_pairing": {
+        "trials": 200,
+        "mean_within_2mm": 0.005,
+        "mean_within_5mm": 0.0125,
+        "note": "Same count, independent unique candidate pairing; not a null distribution conditioned on RANSAC selection"
+      }
+    }
+  },
+  "scope": "Actual independent candidate matches; reference used only after predictions saved",
+  "caveats": [
+    "One specimen and one plane with multiple augmentations, not independent held-out examples",
+    "Reference alignment approximate; errors are reference-coordinate errors, not verified anatomical truth",
+    "Fixed thresholds not tuned on evaluation; baseline may produce no final pairs"
+  ],
+  "transform_recovery": {
+    "rotation_absolute_error_degrees": 0.6971785687680949,
+    "scale_absolute_error": 0.004604993923199019,
+    "effective_matrix_translation_error_px": 3.248533341352728,
+    "median_whole_candidate_transform_error_mm": 0.7320352748649501,
+    "note": "Canvas-aware planted matrix; not raw shift alone"
+  }
+}

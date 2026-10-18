@@ -1,0 +1,13 @@
+{
+  "top_k": 3,
+  "min_similarity": 0.75,
+  "residual_target_px": 6.0,
+  "minimum_consensus": 4,
+  "hypotheses": "Exhaustive two-proposal similarity fits; distinct source and target",
+  "assignment": "Maximum cardinality one-to-one among residual<6 proposals, then minimum squared residual",
+  "selection": "Most final assigned pairs, then smallest squared residual, then largest cosine sum",
+  "refinement": "At most three assignment/refit iterations; residual<6; noncollinear on both sides",
+  "pruning": "Rank initial support upper bounds; skip hypotheses below best final count; heuristic after refits, not global optimality guarantee",
+  "reference_access": "None during proposal selection, hypothesis ranking or fit",
+  "caveat": "New deterministic geometry solver; mutual proposals also run through it as a solver control"
+}

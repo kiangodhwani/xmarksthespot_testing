@@ -1,0 +1,226 @@
+{
+  "status": "numerically_checked_user_visual_review_pending",
+  "matching_run": false,
+  "frozen_pipeline_hashes_verified": true,
+  "study_plan_sha256": "94fe5d23574a4b81f336369e337ac99f500554d962ec0383b760c81118e3e119",
+  "slices": [
+    {
+      "id": "y_m20",
+      "y_mm": -20.0,
+      "shape_rows_cols": [
+        631,
+        700
+      ],
+      "spacing_mm": 0.2,
+      "full_grid_pixel_world_roundtrip_max_px": 1.1368683772161603e-13,
+      "source_hashes_verified": true,
+      "arrays_sha256": "48e6e36f7c78f6bde438b0db81424bfecd3731250116f8344c6e1bdb58238320",
+      "six_transform_checks": [
+        {
+          "case": "fixed",
+          "full_grid_roundtrip_max_px": 2.2737367544323206e-13,
+          "full_grid_world_roundtrip_max_mm": 7.140866117879973e-14,
+          "no_footprint_clipping": true
+        },
+        {
+          "case": "pair_001",
+          "full_grid_roundtrip_max_px": 2.2737367544323206e-13,
+          "full_grid_world_roundtrip_max_mm": 7.246142549764705e-14,
+          "no_footprint_clipping": true
+        },
+        {
+          "case": "pair_002",
+          "full_grid_roundtrip_max_px": 2.2737367544323206e-13,
+          "full_grid_world_roundtrip_max_mm": 8.644125458514252e-14,
+          "no_footprint_clipping": true
+        },
+        {
+          "case": "pair_003",
+          "full_grid_roundtrip_max_px": 2.2737367544323206e-13,
+          "full_grid_world_roundtrip_max_mm": 7.105427357601002e-14,
+          "no_footprint_clipping": true
+        },
+        {
+          "case": "pair_004",
+          "full_grid_roundtrip_max_px": 2.2737367544323206e-13,
+          "full_grid_world_roundtrip_max_mm": 6.355287432313019e-14,
+          "no_footprint_clipping": true
+        },
+        {
+          "case": "pair_005",
+          "full_grid_roundtrip_max_px": 2.2737367544323206e-13,
+          "full_grid_world_roundtrip_max_mm": 8.28628102289784e-14,
+          "no_footprint_clipping": true
+        }
+      ],
+      "mask_reports": {
+        "mri": {
+          "method": "Otsu, 256 histogram bins",
+          "threshold": 83.73596954345703,
+          "tissue_rule": "intensity > threshold",
+          "valid_pixels": 439042,
+          "raw_tissue_pixels": 215725,
+          "cleaned_tissue_pixels": 215725,
+          "removed_pixels": 0,
+          "components_before": 3,
+          "max_removed_component_pixels": 25,
+          "sensitivity_delta": 0.02,
+          "sensitivity_delta_definition": "2% of valid intensity range, not anatomical uncertainty",
+          "sensitivity_delta_intensity": 4.2239227294921875,
+          "pixels_changed_at_lower_threshold": 796,
+          "pixels_changed_at_upper_threshold": 789
+        },
+        "histology_original": {
+          "method": "Background-relative hysteresis, 8-connected propagation",
+          "background_estimator": "Median of brightest 10% of valid pixels",
+          "estimated_background": 65535.0,
+          "bright_tail_robust_sigma": 0.0,
+          "intensity_span": 65535.0,
+          "weak_fraction": 0.01,
+          "strong_fraction": 0.05,
+          "weak_darkness_margin": 655.35,
+          "strong_darkness_margin": 3276.75,
+          "possible_tissue_intensity_below": 64879.65,
+          "strong_tissue_intensity_below": 62258.25,
+          "strong_seed_pixels": 197790,
+          "possible_tissue_pixels": 203747,
+          "hysteresis_tissue_pixels": 203741,
+          "pale_connected_pixels_added": 5951,
+          "disconnected_possible_pixels_rejected": 6,
+          "assumptions": "Near-white background occupies the bright tail; uniform background in this processed BigBrain slice",
+          "limitations": "Fixed initial margins require validation; pale disconnected tissue may be missed; noise floor estimated from truncated bright tail is not a calibrated uncertainty"
+        },
+        "histology_fixed": {
+          "method": "Background-relative hysteresis, 8-connected propagation",
+          "background_estimator": "Median of brightest 10% of valid pixels",
+          "estimated_background": 65535.0,
+          "bright_tail_robust_sigma": 0.0,
+          "intensity_span": 65535.0,
+          "weak_fraction": 0.01,
+          "strong_fraction": 0.05,
+          "weak_darkness_margin": 655.35,
+          "strong_darkness_margin": 3276.75,
+          "possible_tissue_intensity_below": 64879.65,
+          "strong_tissue_intensity_below": 62258.25,
+          "strong_seed_pixels": 262978,
+          "possible_tissue_pixels": 272178,
+          "hysteresis_tissue_pixels": 272178,
+          "pale_connected_pixels_added": 9200,
+          "disconnected_possible_pixels_rejected": 0,
+          "assumptions": "Near-white background occupies the bright tail; uniform background in this processed BigBrain slice",
+          "limitations": "Fixed initial margins require validation; pale disconnected tissue may be missed; noise floor estimated from truncated bright tail is not a calibrated uncertainty"
+        }
+      },
+      "caution": "Mask outlines are provisional search support, not tissue-only segmentation or matching predictions"
+    },
+    {
+      "id": "y35",
+      "y_mm": 35.0,
+      "shape_rows_cols": [
+        631,
+        700
+      ],
+      "spacing_mm": 0.2,
+      "full_grid_pixel_world_roundtrip_max_px": 1.1368683772161603e-13,
+      "source_hashes_verified": true,
+      "arrays_sha256": "30fa4cb425734f8fdcfeef60ce64771710e3927d5e6d937b861f23f589f46129",
+      "six_transform_checks": [
+        {
+          "case": "fixed",
+          "full_grid_roundtrip_max_px": 2.2737367544323206e-13,
+          "full_grid_world_roundtrip_max_mm": 7.140866117879973e-14,
+          "no_footprint_clipping": true
+        },
+        {
+          "case": "pair_001",
+          "full_grid_roundtrip_max_px": 2.2737367544323206e-13,
+          "full_grid_world_roundtrip_max_mm": 7.246142549764705e-14,
+          "no_footprint_clipping": true
+        },
+        {
+          "case": "pair_002",
+          "full_grid_roundtrip_max_px": 2.2737367544323206e-13,
+          "full_grid_world_roundtrip_max_mm": 8.644125458514252e-14,
+          "no_footprint_clipping": true
+        },
+        {
+          "case": "pair_003",
+          "full_grid_roundtrip_max_px": 2.2737367544323206e-13,
+          "full_grid_world_roundtrip_max_mm": 7.105427357601002e-14,
+          "no_footprint_clipping": true
+        },
+        {
+          "case": "pair_004",
+          "full_grid_roundtrip_max_px": 2.2737367544323206e-13,
+          "full_grid_world_roundtrip_max_mm": 6.355287432313019e-14,
+          "no_footprint_clipping": true
+        },
+        {
+          "case": "pair_005",
+          "full_grid_roundtrip_max_px": 2.2737367544323206e-13,
+          "full_grid_world_roundtrip_max_mm": 8.28628102289784e-14,
+          "no_footprint_clipping": true
+        }
+      ],
+      "mask_reports": {
+        "mri": {
+          "method": "Otsu, 256 histogram bins",
+          "threshold": 86.44668579101562,
+          "tissue_rule": "intensity > threshold",
+          "valid_pixels": 439042,
+          "raw_tissue_pixels": 149109,
+          "cleaned_tissue_pixels": 149075,
+          "removed_pixels": 34,
+          "components_before": 7,
+          "max_removed_component_pixels": 25,
+          "sensitivity_delta": 0.02,
+          "sensitivity_delta_definition": "2% of valid intensity range, not anatomical uncertainty",
+          "sensitivity_delta_intensity": 4.837235412597656,
+          "pixels_changed_at_lower_threshold": 671,
+          "pixels_changed_at_upper_threshold": 722
+        },
+        "histology_original": {
+          "method": "Background-relative hysteresis, 8-connected propagation",
+          "background_estimator": "Median of brightest 10% of valid pixels",
+          "estimated_background": 65535.0,
+          "bright_tail_robust_sigma": 0.0,
+          "intensity_span": 27322.765625,
+          "weak_fraction": 0.01,
+          "strong_fraction": 0.05,
+          "weak_darkness_margin": 273.22765625,
+          "strong_darkness_margin": 1366.13828125,
+          "possible_tissue_intensity_below": 65261.77234375,
+          "strong_tissue_intensity_below": 64168.86171875,
+          "strong_seed_pixels": 134324,
+          "possible_tissue_pixels": 136376,
+          "hysteresis_tissue_pixels": 136371,
+          "pale_connected_pixels_added": 2047,
+          "disconnected_possible_pixels_rejected": 5,
+          "assumptions": "Near-white background occupies the bright tail; uniform background in this processed BigBrain slice",
+          "limitations": "Fixed initial margins require validation; pale disconnected tissue may be missed; noise floor estimated from truncated bright tail is not a calibrated uncertainty"
+        },
+        "histology_fixed": {
+          "method": "Background-relative hysteresis, 8-connected propagation",
+          "background_estimator": "Median of brightest 10% of valid pixels",
+          "estimated_background": 65535.0,
+          "bright_tail_robust_sigma": 0.0,
+          "intensity_span": 25896.0078125,
+          "weak_fraction": 0.01,
+          "strong_fraction": 0.05,
+          "weak_darkness_margin": 258.960078125,
+          "strong_darkness_margin": 1294.800390625,
+          "possible_tissue_intensity_below": 65276.039921875,
+          "strong_tissue_intensity_below": 64240.199609375,
+          "strong_seed_pixels": 178955,
+          "possible_tissue_pixels": 182407,
+          "hysteresis_tissue_pixels": 182406,
+          "pale_connected_pixels_added": 3451,
+          "disconnected_possible_pixels_rejected": 1,
+          "assumptions": "Near-white background occupies the bright tail; uniform background in this processed BigBrain slice",
+          "limitations": "Fixed initial margins require validation; pale disconnected tissue may be missed; noise floor estimated from truncated bright tail is not a calibrated uncertainty"
+        }
+      },
+      "caution": "Mask outlines are provisional search support, not tissue-only segmentation or matching predictions"
+    }
+  ]
+}

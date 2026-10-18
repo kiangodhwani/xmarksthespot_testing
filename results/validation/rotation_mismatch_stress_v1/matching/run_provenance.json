@@ -1,0 +1,18 @@
+{
+  "study_plan_sha256": "76de425ee453038a58e7b64bb22123c1c6c3ef635159d2c151cebc16aa8dc816",
+  "preparation_review_sha256": "320c837193207251922eb6d611e7acde1ebbd032ff559f06047cb6963612c688",
+  "frozen_source_sha256": {
+    "landmarks/mind.py": "e6e419331d0801774546d915c663878c490168766cc151980f4b7b0049ef863e",
+    "landmarks/relational.py": "5149e37781458bbd232e6973944be6ceb4e638295d99cf45ab2763d60a21edbc",
+    "landmarks/candidates.py": "29c2414c266cb6a88e96428ed859e1e03024adde7e7f9ea6f54db80eb8564aaf",
+    "landmarks/masking.py": "567ef4e9b0b3eeb7605da313e7fe823f1cb5b5d86d9f7ecf912be36c90a466c7",
+    "landmarks/matching.py": "fc06bfe9b816d186a8e0718e2fede36a9925fcf8b91c5c095dfa340087b37c41",
+    "landmarks/planes.py": "6b7ee6e30ab06ad56add4b77fbfee388ecba03421a42b30395e6cdd5c781733d",
+    "landmarks/transforms.py": "fb8b32db6f5b9727008cea23760969ca45e01ea2aee5262ff78daf9ec0b69086"
+  },
+  "runner_sha256": "92e7df2187466c112fe8dfd4e93a0d55385a3e893989226e2df870a17a53656c",
+  "input_sha256": {
+    "/home/dell/PycharmProjects/xmarksthespot_testing/results/pairs/coronal_y8_repeat/images.npz": "beefbfb1e436a78b573197a3e8e7ead810df9b0550bfd8b7641c83ec93f7abff",
+    "/home/dell/PycharmProjects/xmarksthespot_testing/results/validation/rotation_mismatch_stress_v1/pair/inputs.npz": "eac18f2cd1e21457661e379794501739258976eb2ac326c1b616bb7a3c73f2f6"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "current": "Mutual + cosine >=0.75 + distance ratio <0.9",
+    "similarity_only": "Mutual + cosine >=0.75; no ratio test",
+    "all_mutual": "All valid mutual nearest neighbours; no score or ratio cutoff"
+  },
+  "ransac": {
+    "residual_target_px": 6.0,
+    "minimum_consensus": 4,
+    "max_trials": 5000,
+    "seed": 0
+  },
+  "evaluation_thresholds_mm": [
+    2.0,
+    5.0
+  ],
+  "scope": "Fixed ablation of saved image-only proposals; no descriptor/detector/RANSAC changes"
+}

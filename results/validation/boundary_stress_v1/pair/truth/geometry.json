@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "parameters": {
+    "clockwise_degrees": -30.0,
+    "scale": 0.85,
+    "translation_col_row_px": [
+      -50.0,
+      50.0
+    ],
+    "translation_in_original_grid_mm": [
+      -10.0,
+      10.0
+    ],
+    "translation_mm_direction": "Positive column shift is anatomical right; positive row shift is inferior; before canvas offset",
+    "centre_col_row_px": [
+      349.5,
+      315.0
+    ],
+    "padding_px": 10
+  },
+  "operations": "Scale and clockwise rotation about original centre, translation, canvas offset; one bilinear image warp",
+  "point_convention": "[col,row,1]; row increases downward",
+  "requested_original_to_transformed_without_canvas": [
+    [
+      0.7361215932167728,
+      0.42499999999999993,
+      -91.64949682926203
+    ],
+    [
+      -0.42499999999999993,
+      0.7361215932167728,
+      281.65919813671655
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "canvas_offset_col_row_px": [
+    102.0,
+    126.0
+  ],
+  "original_to_transformed": [
+    [
+      0.7361215932167728,
+      0.42499999999999993,
+      10.350503170737966
+    ],
+    [
+      -0.42499999999999993,
+      0.7361215932167728,
+      407.65919813671655
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "transformed_to_original": [
+    [
+      1.0188534162169867,
+      -0.588235294117647,
+      229.25388280064445
+    ],
+    [
+      0.5882352941176471,
+      1.0188534162169867,
+      -421.43349795077575
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "original_pixel_to_world_ras_mm": [
+    [
+      0.2,
+      0.0,
+      -70.8
+    ],
+    [
+      0.0,
+      0.0,
+      8.0
+    ],
+    [
+      0.0,
+      -0.2,
+      67.2
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "transformed_pixel_to_world_ras_mm": [
+    [
+      0.20377068324339734,
+      -0.1176470588235294,
+      -24.949223439871105
+    ],
+    [
+      0.0,
+      0.0,
+      8.0
+    ],
+    [
+      -0.11764705882352942,
+      -0.20377068324339734,
+      151.48669959015515
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "mri_shape_rows_cols": [
+    631,
+    700
+  ],
+  "histology_shape_rows_cols": [
+    883,
+    904
+  ],
+  "transformed_source_footprint": [
+    [
+      9.76994237412958,
+      407.5036373401082
+    ],
+    [
+      525.0550576258706,
+      110.00363734010818
+    ],
+    [
+      793.2300576258706,
+      574.4963626598919
+    ],
+    [
+      277.94494237412954,
+      871.9963626598918
+    ]
+  ],
+  "canvas_policy": "Original and zero-translation rotated/scaled footprints plus symmetric translation margins; translation not cropped away",
+  "interpolation": "Gaussian antialias prefilter for reduction, then bilinear; invalid filter/interpolation support excluded; background 65535",
+  "antialias_sigma_source_px": 0.3098721692015512,
+  "randomisation": null,
+  "scale_effect": "Underlying sampling 0.23529412 mm along rotated axes; use saved world mapping",
+  "ground_truth_scope": "Synthetic coordinate truth only; original MRI/histology anatomical discrepancies remain",
+  "inputs": {
+    "directory": "/home/dell/PycharmProjects/xmarksthespot_testing/results/pairs/coronal_y8_repeat",
+    "sha256": {
+      "images.npz": "beefbfb1e436a78b573197a3e8e7ead810df9b0550bfd8b7641c83ec93f7abff",
+      "geometry.json": "d028e2b88de6455a0bbc8766ab8f532b420880bf2b36fc938d99e222544be5f1"
+    }
+  },
+  "versions": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1"
+  },
+  "checks": {
+    "full_grid_roundtrip_max_px": 2.2737367544323206e-13,
+    "full_grid_world_roundtrip_max_mm": 7.105427357601002e-14,
+    "no_footprint_clipping": true
+  },
+  "attribution": "BigBrain: Amunts et al., Science 2013; CC BY-NC-SA 4.0"
+}

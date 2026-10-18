@@ -1,0 +1,47 @@
+{
+  "source_prediction": "results/validation/two_slices_v1/matching/y_m20/fixed/predictions.npz",
+  "source_prediction_sha256": "00cc93db89684e70f15d6d288477715ba9b16d56d0b7d576d7af0a459ce6f713",
+  "score_source": "results/validation/two_slices_v1/matching/y_m20/fixed/predictions.npz",
+  "reference_geometry": "results/validation/two_slices_v1/y_m20/fixed/truth/geometry.json",
+  "evaluated_image_pair": "results/validation/two_slices_v1/y_m20/fixed/inputs.npz",
+  "source_evaluation": "results/validation/two_slices_v1/matching/y_m20/fixed/evaluation.json",
+  "csv_origin": "copied_existing_verified_csv",
+  "csv_sha256": "d1ef4ed2785d727ca04347dd93c589f998495103ffe152004c2650ff9cb726d9",
+  "source_modality": "mri",
+  "original_pairs": [
+    [
+      3,
+      103
+    ],
+    [
+      5,
+      104
+    ],
+    [
+      6,
+      102
+    ],
+    [
+      9,
+      2
+    ],
+    [
+      10,
+      16
+    ],
+    [
+      43,
+      94
+    ],
+    [
+      64,
+      117
+    ],
+    [
+      88,
+      3
+    ]
+  ],
+  "prediction_duplicate_of": null,
+  "note": "Rows are algorithm-retained predictions, including reference-incorrect pairs; no truth-conditioned filtering"
+}

@@ -1,0 +1,132 @@
+{
+  "seed": 42,
+  "count": 5,
+  "generator": "numpy.default_rng / PCG64",
+  "numpy_version": "2.5.4",
+  "sampling": {
+    "angle_degrees_uniform": [
+      -30,
+      30
+    ],
+    "scale_uniform": [
+      0.85,
+      1.2
+    ],
+    "translation_pixels_inclusive": [
+      -50,
+      50
+    ]
+  },
+  "source_plane": {
+    "y_mm": -20.0,
+    "note": "One fixed plane; pairs are augmentations, not independent specimens"
+  },
+  "status": "complete",
+  "pairs": [
+    {
+      "id": "pair_001",
+      "parameters": {
+        "angle": 16.437362913357802,
+        "scale": 1.0036074539132183,
+        "shift": [
+          -7,
+          36
+        ]
+      },
+      "histology_shape_rows_cols": [
+        899,
+        888
+      ],
+      "checks": {
+        "full_grid_roundtrip_max_px": 2.2737367544323206e-13,
+        "full_grid_world_roundtrip_max_mm": 7.246142549764705e-14,
+        "no_footprint_clipping": true
+      },
+      "antialias_sigma_source_px": 0.0
+    },
+    {
+      "id": "pair_002",
+      "parameters": {
+        "angle": 11.842081743561835,
+        "scale": 0.8829620717606773,
+        "shift": [
+          3,
+          48
+        ]
+      },
+      "histology_shape_rows_cols": [
+        789,
+        746
+      ],
+      "checks": {
+        "full_grid_roundtrip_max_px": 2.2737367544323206e-13,
+        "full_grid_world_roundtrip_max_mm": 8.644125458514252e-14,
+        "no_footprint_clipping": true
+      },
+      "antialias_sigma_source_px": 0.2658349355726077
+    },
+    {
+      "id": "pair_003",
+      "parameters": {
+        "angle": 15.668382119421182,
+        "scale": 1.1251225068469337,
+        "shift": [
+          1,
+          -38
+        ]
+      },
+      "histology_shape_rows_cols": [
+        993,
+        974
+      ],
+      "checks": {
+        "full_grid_roundtrip_max_px": 2.2737367544323206e-13,
+        "full_grid_world_roundtrip_max_mm": 7.105427357601002e-14,
+        "no_footprint_clipping": true
+      },
+      "antialias_sigma_source_px": 0.0
+    },
+    {
+      "id": "pair_004",
+      "parameters": {
+        "angle": -2.9768437262659724,
+        "scale": 0.9797793084814034,
+        "shift": [
+          -32,
+          43
+        ]
+      },
+      "histology_shape_rows_cols": [
+        761,
+        802
+      ],
+      "checks": {
+        "full_grid_roundtrip_max_px": 2.2737367544323206e-13,
+        "full_grid_world_roundtrip_max_mm": 6.355287432313019e-14,
+        "no_footprint_clipping": true
+      },
+      "antialias_sigma_source_px": 0.10210526413616218
+    },
+    {
+      "id": "pair_005",
+      "parameters": {
+        "angle": 8.63190720483987,
+        "scale": 1.1379665646447905,
+        "shift": [
+          5,
+          -6
+        ]
+      },
+      "histology_shape_rows_cols": [
+        863,
+        926
+      ],
+      "checks": {
+        "full_grid_roundtrip_max_px": 2.2737367544323206e-13,
+        "full_grid_world_roundtrip_max_mm": 8.28628102289784e-14,
+        "no_footprint_clipping": true
+      },
+      "antialias_sigma_source_px": 0.0
+    }
+  ]
+}

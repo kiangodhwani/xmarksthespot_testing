@@ -1,0 +1,67 @@
+{
+  "source_prediction": "results/validation/two_slices_v1/matching/y35/pair_005/predictions.npz",
+  "source_prediction_sha256": "14563e3ff6eb67bc488c1f19b0048fa94bf5ec4f9c608a6c9bd4487e03af568b",
+  "score_source": "results/validation/two_slices_v1/matching/y35/pair_005/predictions.npz",
+  "reference_geometry": "results/validation/two_slices_v1/y35/random_seed42/pair_005/truth/geometry.json",
+  "evaluated_image_pair": "results/validation/two_slices_v1/y35/random_seed42/pair_005/inputs.npz",
+  "source_evaluation": "results/validation/two_slices_v1/matching/y35/pair_005/evaluation.json",
+  "csv_origin": "copied_existing_verified_csv",
+  "csv_sha256": "c25f1f40b12d3ed01d9abd28d8e7c7e4fe9f807d547bf1ee6d44bf41bc767835",
+  "source_modality": "mri",
+  "original_pairs": [
+    [
+      3,
+      44
+    ],
+    [
+      8,
+      76
+    ],
+    [
+      12,
+      7
+    ],
+    [
+      26,
+      46
+    ],
+    [
+      28,
+      4
+    ],
+    [
+      37,
+      128
+    ],
+    [
+      51,
+      66
+    ],
+    [
+      52,
+      14
+    ],
+    [
+      53,
+      80
+    ],
+    [
+      54,
+      31
+    ],
+    [
+      64,
+      67
+    ],
+    [
+      65,
+      42
+    ],
+    [
+      68,
+      59
+    ]
+  ],
+  "prediction_duplicate_of": null,
+  "note": "Rows are algorithm-retained predictions, including reference-incorrect pairs; no truth-conditioned filtering"
+}

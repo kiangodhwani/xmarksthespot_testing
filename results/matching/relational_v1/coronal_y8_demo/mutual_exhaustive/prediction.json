@@ -1,0 +1,14 @@
+{
+  "variant": "mutual_exhaustive",
+  "description": "Mutual + exhaustive three-point fits",
+  "geometry": {
+    "triples_tested": 3654,
+    "noncollinear_triples": 3411,
+    "largest_raw_consensus": 4,
+    "retained": 4,
+    "status": "estimated_model_not_anatomically_verified"
+  },
+  "inference_seconds": 0.17021657700024662,
+  "source_prediction_sha256": "74d0c3435219b2bd8ca8338ac352631e2649c0cd40f47be3d3382b645a2e9c80",
+  "reference_access": "None before all experiment predictions frozen"
+}

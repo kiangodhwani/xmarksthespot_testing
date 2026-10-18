@@ -1,0 +1,38 @@
+{
+  "query_index": 43,
+  "target_index": 126,
+  "examples": [
+    {
+      "label": "Reference diagnostic",
+      "source_radius_px": 36.0,
+      "target_radius_px": 36.0,
+      "target_sampling_clockwise_degrees": 0,
+      "score": 0.9423261880874634,
+      "reference_error_mm": 0.0,
+      "source_centre": [
+        53.0,
+        184.0
+      ],
+      "target_centre": [
+        71.72186642296036,
+        309.90869242560564
+      ]
+    },
+    {
+      "label": "Algorithm top-scoring candidate",
+      "source_radius_px": 16.0,
+      "target_radius_px": 16.0,
+      "target_sampling_clockwise_degrees": 240,
+      "score": 0.9446532726287842,
+      "reference_error_mm": 52.849786412623,
+      "source_centre": [
+        53.0,
+        184.0
+      ],
+      "target_centre": [
+        116.0,
+        565.0
+      ]
+    }
+  ]
+}

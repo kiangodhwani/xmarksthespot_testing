@@ -1,0 +1,28 @@
+{
+  "count": 0,
+  "count_within_2mm": 0,
+  "count_within_5mm": 0,
+  "fraction_within_2mm": null,
+  "fraction_within_5mm": null,
+  "median_error_mm": null,
+  "mean_error_mm": null,
+  "max_error_mm": null,
+  "correct_within_2mm_spread": {
+    "hull_area_mm2": 0.0,
+    "minor_major_spread_ratio": 0.0
+  },
+  "correct_pairs_ge4_noncollinear": false,
+  "correct_hull_area_divided_by_source_mask_area": 0.0,
+  "random_candidate_pairing": null,
+  "chance_metric_origin": "not_applicable_empty_output",
+  "observed_exceeds_random_mean_2mm": null,
+  "observed_exceeds_random_mean_5mm": null,
+  "transform_recovery": null,
+  "transform_parameters": {
+    "planted_clockwise_degrees": 16.437362913357806,
+    "planted_scale": 1.0036074539132183,
+    "estimated_clockwise_degrees": null,
+    "estimated_scale": null,
+    "estimated_source_to_target_matrix": null
+  }
+}

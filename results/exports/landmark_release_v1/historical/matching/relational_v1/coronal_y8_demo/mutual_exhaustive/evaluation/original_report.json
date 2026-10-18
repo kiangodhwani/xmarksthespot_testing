@@ -1,0 +1,81 @@
+{
+  "case": "coronal_y8_demo",
+  "variant": "mutual_exhaustive",
+  "input": {
+    "count": 29,
+    "count_within_2mm": 4,
+    "count_within_5mm": 6,
+    "unique_sources_within_2mm": 4,
+    "chance_note": "No unique-pair random comparator for many-to-many proposal counts"
+  },
+  "retained": {
+    "count": 4,
+    "count_within_2mm": 3,
+    "count_within_5mm": 4,
+    "fraction_within_2mm": 0.75,
+    "fraction_within_5mm": 1.0,
+    "median_error_mm": 1.1508684399152478,
+    "correct_within_2mm_spread": {
+      "hull_area_mm2": 481.68000000000006,
+      "minor_major_spread_ratio": 0.3184203005594989
+    },
+    "correct_hull_fraction_of_mri_mask_area": 0.05858827650630546,
+    "random_candidate_pairing": {
+      "trials": 200,
+      "mean_within_2mm": 0.005,
+      "mean_within_5mm": 0.01125,
+      "note": "Same count, independent unique candidate pairing; not a null distribution conditioned on RANSAC selection"
+    }
+  },
+  "input_errors_mm": [
+    2.997626326486253,
+    97.8709200673145,
+    16.920457073587386,
+    55.29596674037346,
+    2.6609492582537055,
+    87.89692226430974,
+    1.8040444911775917,
+    36.95650146928028,
+    88.02597791186396,
+    67.99032563274068,
+    27.626209841680318,
+    1.4289227325616323,
+    79.73186186600722,
+    0.8372491666739827,
+    94.49415958760635,
+    49.01629261604264,
+    39.48950834478688,
+    51.3895154650227,
+    33.465271722967394,
+    66.87348519537419,
+    96.10690100949168,
+    100.51425708398365,
+    103.44283473348585,
+    70.913404205293,
+    68.90899132919824,
+    97.2553973252036,
+    74.46686845374013,
+    0.8728141472688635,
+    63.96967573091218
+  ],
+  "retained_errors_mm": [
+    2.997626326486253,
+    1.4289227325616323,
+    0.8372491666739827,
+    0.8728141472688635
+  ],
+  "transform_recovery": {
+    "rotation_absolute_error_degrees": 0.33430478903983385,
+    "scale_absolute_error": 0.02195803716913458,
+    "effective_matrix_translation_error_px": 6.870797781064231,
+    "median_whole_candidate_transform_error_mm": 2.106749090046807
+  },
+  "geometry": {
+    "triples_tested": 3654,
+    "noncollinear_triples": 3411,
+    "largest_raw_consensus": 4,
+    "retained": 4,
+    "status": "estimated_model_not_anatomically_verified"
+  },
+  "inference_seconds": 0.17021657700024662
+}

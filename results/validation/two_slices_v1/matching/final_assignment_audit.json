@@ -1,0 +1,114 @@
+[
+  {
+    "slice_id": "y_m20",
+    "case": "fixed",
+    "unique_source_and_target": true,
+    "max_model_residual_target_px": 5.66784982787323,
+    "max_reference_pair_error_mm": 1.873028427375838,
+    "prediction_sha256": "00cc93db89684e70f15d6d288477715ba9b16d56d0b7d576d7af0a459ce6f713"
+  },
+  {
+    "slice_id": "y_m20",
+    "case": "pair_001",
+    "unique_source_and_target": true,
+    "max_model_residual_target_px": 4.837275257971828,
+    "max_reference_pair_error_mm": 1.988888536845498,
+    "prediction_sha256": "9c132b64ce249d56f815f9d965a7e6b2586517660b219ff7b94dee647e320749"
+  },
+  {
+    "slice_id": "y_m20",
+    "case": "pair_002",
+    "unique_source_and_target": true,
+    "max_model_residual_target_px": 4.939772767423381,
+    "max_reference_pair_error_mm": 1.782509589131872,
+    "prediction_sha256": "a0b92553c3d4c188d128d1767752340ae2af9bf471a50927ecb579e2a3b198aa"
+  },
+  {
+    "slice_id": "y_m20",
+    "case": "pair_003",
+    "unique_source_and_target": true,
+    "max_model_residual_target_px": 3.879878036910615,
+    "max_reference_pair_error_mm": 1.5002409395591028,
+    "prediction_sha256": "0fc28ba1a902adf27904dc37e4f618136038d324ffa2ceb39cc6aec9729045c9"
+  },
+  {
+    "slice_id": "y_m20",
+    "case": "pair_004",
+    "unique_source_and_target": true,
+    "max_model_residual_target_px": 5.9556482662338075,
+    "max_reference_pair_error_mm": 1.923629612743054,
+    "prediction_sha256": "005208ee36531e577bae9a09388a7e067db0ff9bd5dfddf9d60a37ed40bbbd30"
+  },
+  {
+    "slice_id": "y_m20",
+    "case": "pair_005",
+    "unique_source_and_target": true,
+    "max_model_residual_target_px": 5.675385030633443,
+    "max_reference_pair_error_mm": 1.6401128007723536,
+    "prediction_sha256": "11ba36e75ad903044273d61558ca6f646fa805b8ab97ebcb2d9c06634b637a3f"
+  },
+  {
+    "slice_id": "y_m20",
+    "case": "histology_control",
+    "unique_source_and_target": true,
+    "max_model_residual_target_px": 5.933384243750627,
+    "max_reference_pair_error_mm": 1.0590546086940356,
+    "prediction_sha256": "439dc0309316cce667d4b10f983705584c2aa1b49c0240ff3fd82cc870d01f22"
+  },
+  {
+    "slice_id": "y35",
+    "case": "fixed",
+    "unique_source_and_target": true,
+    "max_model_residual_target_px": 4.864578386920257,
+    "max_reference_pair_error_mm": 1.1762214857891482,
+    "prediction_sha256": "4d777397c6daa16aa868cbb211b396cdc49d4a3f2cd94bbb6727e87f3e93c30f"
+  },
+  {
+    "slice_id": "y35",
+    "case": "pair_001",
+    "unique_source_and_target": true,
+    "max_model_residual_target_px": 5.499421800462459,
+    "max_reference_pair_error_mm": 1.1534991340722633,
+    "prediction_sha256": "b622f89b9cbe9638e226cf1d8e1338e4be26ab5add89aebcbcd25308cb45577d"
+  },
+  {
+    "slice_id": "y35",
+    "case": "pair_002",
+    "unique_source_and_target": true,
+    "max_model_residual_target_px": 4.215169256828172,
+    "max_reference_pair_error_mm": 1.0790433607585748,
+    "prediction_sha256": "edb467c993bb1693b3f7dd1e294e7594b18daf3966801f411d8ab22821f4a0ae"
+  },
+  {
+    "slice_id": "y35",
+    "case": "pair_003",
+    "unique_source_and_target": true,
+    "max_model_residual_target_px": 5.214161947838168,
+    "max_reference_pair_error_mm": 0.9762199551935227,
+    "prediction_sha256": "f8516265670857bd5a6dcdf666968a44ce15c80cef8e09f883b6f01db7b434ef"
+  },
+  {
+    "slice_id": "y35",
+    "case": "pair_004",
+    "unique_source_and_target": true,
+    "max_model_residual_target_px": 5.7925594743696065,
+    "max_reference_pair_error_mm": 1.321484811110176,
+    "prediction_sha256": "9cb3fec2105414f4db64647442e45fd7857a1c1ad951bb3dc7c739242033b8d9"
+  },
+  {
+    "slice_id": "y35",
+    "case": "pair_005",
+    "unique_source_and_target": true,
+    "max_model_residual_target_px": 4.958405413074836,
+    "max_reference_pair_error_mm": 1.1363320685986242,
+    "prediction_sha256": "14563e3ff6eb67bc488c1f19b0048fa94bf5ec4f9c608a6c9bd4487e03af568b"
+  },
+  {
+    "slice_id": "y35",
+    "case": "histology_control",
+    "unique_source_and_target": true,
+    "max_model_residual_target_px": 4.123859174769782,
+    "max_reference_pair_error_mm": 0.7408105375112076,
+    "prediction_sha256": "0f794862d67991d7621118ebf74eed47b40552690824a4159b8810a3ab2a0642"
+  }
+]

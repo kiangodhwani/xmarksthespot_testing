@@ -1,0 +1,17 @@
+{
+  "variant": "mutual_relational",
+  "description": "Mutual + relational geometry",
+  "geometry": {
+    "status": "estimated_model_not_anatomically_verified",
+    "minimum_consensus": 4,
+    "residual_threshold_histology_px": 6.0,
+    "proposals": 36,
+    "hypotheses_tested": 630,
+    "valid_pair_hypotheses": 630,
+    "assignment_refinements": 7,
+    "retained": 5
+  },
+  "inference_seconds": 0.004989092998584965,
+  "source_prediction_sha256": "079f80766ba4167ae4cfe4a736c1998a9ab8e0ae803e2f17b1a2d4dae6067db5",
+  "reference_access": "None before all experiment predictions frozen"
+}

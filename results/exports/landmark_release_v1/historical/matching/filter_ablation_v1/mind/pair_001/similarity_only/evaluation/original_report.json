@@ -1,0 +1,98 @@
+{
+  "method": "mind",
+  "case": "pair_001",
+  "variant": "similarity_only",
+  "geometric_filter": {
+    "status": "estimated_model_not_anatomically_verified",
+    "minimum_consensus": 4,
+    "residual_threshold_histology_px": 6.0,
+    "seed": 0,
+    "max_trials": 5000,
+    "raw_consensus": 6,
+    "retained": 6,
+    "scale": 0.9668622917768948,
+    "clockwise_degrees": 17.430031911870753,
+    "translation_col_row_px": [
+      197.41048468320707,
+      96.33699889063348
+    ],
+    "matrix": [
+      [
+        0.9224673143889432,
+        -0.28961482203803024,
+        197.41048468320707
+      ],
+      [
+        0.2896148220380302,
+        0.922467314388943,
+        96.33699889063348
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "ransac_seconds": 0.04284644099971047,
+  "stages": {
+    "input": {
+      "count": 30,
+      "count_within_2mm": 6,
+      "count_within_5mm": 7,
+      "fraction_within_2mm": 0.2,
+      "fraction_within_5mm": 0.23333333333333334,
+      "median_error_mm": 50.063138525593246,
+      "correct_within_2mm_spread": {
+        "hull_area_mm2": 2233.8399999999997,
+        "minor_major_spread_ratio": 0.738488727991927
+      },
+      "correct_hull_fraction_of_mri_mask_area": 0.27170909232445883,
+      "random_candidate_pairing": {
+        "trials": 200,
+        "mean_within_2mm": 0.0038333333333333336,
+        "mean_within_5mm": 0.0105,
+        "note": "Same count, independent unique candidate pairing; not a null distribution conditioned on RANSAC selection"
+      }
+    },
+    "retained": {
+      "count": 6,
+      "count_within_2mm": 5,
+      "count_within_5mm": 6,
+      "fraction_within_2mm": 0.8333333333333334,
+      "fraction_within_5mm": 1.0,
+      "median_error_mm": 1.026784998982572,
+      "correct_within_2mm_spread": {
+        "hull_area_mm2": 629.1199999999999,
+        "minor_major_spread_ratio": 0.3085941456965451
+      },
+      "correct_hull_fraction_of_mri_mask_area": 0.07652187451346719,
+      "random_candidate_pairing": {
+        "trials": 200,
+        "mean_within_2mm": 0.004166666666666667,
+        "mean_within_5mm": 0.014999999999999998,
+        "note": "Same count, independent unique candidate pairing; not a null distribution conditioned on RANSAC selection"
+      }
+    }
+  },
+  "retained_reference_errors_mm": [
+    0.8942603253941546,
+    2.8301690257461884,
+    1.9960386614353327,
+    0.8414180516229001,
+    1.159309672570989,
+    0.768390271473359
+  ],
+  "transform_recovery": {
+    "rotation_absolute_error_degrees": 0.9926689985129542,
+    "scale_absolute_error": 0.036745162136323506,
+    "effective_matrix_translation_error_px": 15.896664949802513,
+    "median_whole_candidate_transform_error_mm": 2.1260408809514315
+  },
+  "model_with_majority_pairs_beyond_5mm": false,
+  "rejected_mutual_within_2mm": {
+    "ratio_only": 5,
+    "score_only": 0,
+    "both": 0
+  }
+}

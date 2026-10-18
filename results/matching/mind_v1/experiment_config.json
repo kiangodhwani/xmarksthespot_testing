@@ -1,0 +1,70 @@
+{
+  "name": "mind2d_context_v1",
+  "radii_working_px": [
+    16.0,
+    24.0,
+    36.0
+  ],
+  "angles_clockwise_degrees": [
+    0,
+    30,
+    60,
+    90,
+    120,
+    150,
+    180,
+    210,
+    240,
+    270,
+    300,
+    330
+  ],
+  "canonical_side": 41,
+  "context_centres": [
+    -12,
+    -6,
+    0,
+    6,
+    12
+  ],
+  "offsets_col_row": [
+    [
+      4,
+      0
+    ],
+    [
+      -4,
+      0
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      -4
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      -4,
+      4
+    ],
+    [
+      4,
+      -4
+    ],
+    [
+      -4,
+      -4
+    ]
+  ],
+  "ssd_gaussian_sigma": 1.0,
+  "ssd_kernel_side": 5,
+  "presmoothing": "sigma=max(0.7, radius/20*0.7), truncate=4; full support required",
+  "normalization": "exp(-SSD/mean cardinal SSD), divide channel max, flatten and L2",
+  "similarity": "max cosine: source angle 0, all target angles and all 3x3 radius pairs",
+  "caveat": "2D MIND-style adaptation; not original dense 3D MIND or MIND-SSC; scores not probabilities"
+}

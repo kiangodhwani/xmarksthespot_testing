@@ -1,0 +1,17 @@
+{
+  "variant": "top3_relational",
+  "description": "Top 3 + relational geometry",
+  "geometry": {
+    "status": "estimated_model_not_anatomically_verified",
+    "minimum_consensus": 4,
+    "residual_threshold_histology_px": 6.0,
+    "proposals": 258,
+    "hypotheses_tested": 33153,
+    "valid_pair_hypotheses": 32520,
+    "assignment_refinements": 2,
+    "retained": 14
+  },
+  "inference_seconds": 0.6571076919990446,
+  "source_prediction_sha256": "4946b112357505f673a0f4e5d3ad642f1e1688d769ec22655ae16a44c1ad02a2",
+  "reference_access": "None before all experiment predictions frozen"
+}

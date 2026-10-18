@@ -1,0 +1,201 @@
+{
+  "slice_id": "y_m20",
+  "case": "histology_control",
+  "source_modality": "original_histology",
+  "candidate_counts": {
+    "source": 141,
+    "target": 127
+  },
+  "usable_counts": {
+    "mri": 141,
+    "histology": 127
+  },
+  "detector": {
+    "mri": {
+      "count": 141,
+      "per_scale": [
+        {
+          "sigma_px": 2.0,
+          "peaks": 248
+        },
+        {
+          "sigma_px": 4.0,
+          "peaks": 115
+        },
+        {
+          "sigma_px": 8.0,
+          "peaks": 58
+        }
+      ],
+      "occupied_tiles": 28,
+      "scales_px": [
+        2.0,
+        4.0,
+        8.0
+      ],
+      "max_points": 180,
+      "min_spacing_px": 8.0,
+      "threshold_rel": 0.01,
+      "tile_grid": [
+        6,
+        6
+      ],
+      "per_tile_limit": 10,
+      "normalisation_percentiles": [
+        10112.8803515625,
+        65535.0
+      ],
+      "columns": [
+        "col_px",
+        "row_px",
+        "relative_response",
+        "sigma_px",
+        "tile_id"
+      ],
+      "border_policy": "Exclude detector footprint near invalid support/image edges; tissue mask only filters candidate centres",
+      "limitation": "Multiscale baseline; not intrinsically scale invariant, anatomically labelled, or cross-modality validated"
+    },
+    "histology": {
+      "count": 127,
+      "per_scale": [
+        {
+          "sigma_px": 2.0,
+          "peaks": 312
+        },
+        {
+          "sigma_px": 4.0,
+          "peaks": 136
+        },
+        {
+          "sigma_px": 8.0,
+          "peaks": 73
+        }
+      ],
+      "occupied_tiles": 27,
+      "scales_px": [
+        2.0,
+        4.0,
+        8.0
+      ],
+      "max_points": 180,
+      "min_spacing_px": 8.0,
+      "threshold_rel": 0.01,
+      "tile_grid": [
+        6,
+        6
+      ],
+      "per_tile_limit": 10,
+      "normalisation_percentiles": [
+        12957.59423828125,
+        65535.0
+      ],
+      "columns": [
+        "col_px",
+        "row_px",
+        "relative_response",
+        "sigma_px",
+        "tile_id"
+      ],
+      "border_policy": "Exclude detector footprint near invalid support/image edges; tissue mask only filters candidate centres",
+      "limitation": "Multiscale baseline; not intrinsically scale invariant, anatomically labelled, or cross-modality validated"
+    }
+  },
+  "geometry": {
+    "status": "estimated_model_not_anatomically_verified",
+    "minimum_consensus": 4,
+    "residual_threshold_histology_px": 6.0,
+    "proposals": 423,
+    "hypotheses_tested": 89253,
+    "valid_pair_hypotheses": 87733,
+    "assignment_refinements": 789,
+    "retained": 89
+  },
+  "inference_seconds": 6.425671937000516,
+  "algorithm": "Frozen MIND-style + source top3 + one-to-one relational similarity consensus",
+  "mind_config": {
+    "name": "mind2d_context_v1",
+    "radii_working_px": [
+      16.0,
+      24.0,
+      36.0
+    ],
+    "angles_clockwise_degrees": [
+      0,
+      30,
+      60,
+      90,
+      120,
+      150,
+      180,
+      210,
+      240,
+      270,
+      300,
+      330
+    ],
+    "canonical_side": 41,
+    "context_centres": [
+      -12,
+      -6,
+      0,
+      6,
+      12
+    ],
+    "offsets_col_row": [
+      [
+        4,
+        0
+      ],
+      [
+        -4,
+        0
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        -4
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        -4,
+        4
+      ],
+      [
+        4,
+        -4
+      ],
+      [
+        -4,
+        -4
+      ]
+    ],
+    "ssd_gaussian_sigma": 1.0,
+    "ssd_kernel_side": 5,
+    "presmoothing": "sigma=max(0.7, radius/20*0.7), truncate=4; full support required",
+    "normalization": "exp(-SSD/mean cardinal SSD), divide channel max, flatten and L2",
+    "similarity": "max cosine: source angle 0, all target angles and all 3x3 radius pairs",
+    "caveat": "2D MIND-style adaptation; not original dense 3D MIND or MIND-SSC; scores not probabilities"
+  },
+  "relational_config": {
+    "top_k": 3,
+    "min_similarity": 0.75,
+    "residual_target_px": 6.0,
+    "minimum_consensus": 4,
+    "hypotheses": "Exhaustive two-proposal similarity fits; distinct source and target",
+    "assignment": "Maximum cardinality one-to-one among residual<6 proposals, then minimum squared residual",
+    "selection": "Most final assigned pairs, then smallest squared residual, then largest cosine sum",
+    "refinement": "At most three assignment/refit iterations; residual<6; noncollinear on both sides",
+    "pruning": "Rank initial support upper bounds; skip hypotheses below best final count; heuristic after refits, not global optimality guarantee",
+    "reference_access": "None during proposal selection, hypothesis ranking or fit",
+    "caveat": "New deterministic geometry solver; mutual proposals also run through it as a solver control"
+  },
+  "input_sha256": "d92618eed8e6feb17fb3d831721b05a9bd91657594393322562dcfce81da82ee",
+  "control_source_sha256": "48e6e36f7c78f6bde438b0db81424bfecd3731250116f8344c6e1bdb58238320",
+  "truth_access": "None; all 14 predictions saved before any reference geometry is read"
+}

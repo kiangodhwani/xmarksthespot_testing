@@ -1,0 +1,14 @@
+{
+  "source_prediction": "results/matching/filter_ablation_v1/mind/coronal_y8_demo/current/predictions.npz",
+  "source_prediction_sha256": "5e1a9483711b8aeb711bc4d7f6817848bc42588e697e3a8c82eb232d9cef31ff",
+  "score_source": "results/matching/filter_ablation_v1/mind/coronal_y8_demo/current/predictions.npz",
+  "reference_geometry": "results/transforms/coronal_y8_demo/truth/geometry.json",
+  "evaluated_image_pair": "results/transforms/coronal_y8_demo/inputs.npz",
+  "source_evaluation": "results/matching/filter_ablation_v1/mind/coronal_y8_demo/current/evaluation.json",
+  "csv_origin": "exported_from_saved_prediction",
+  "csv_sha256": "f3872f75c5c0114219e1fd3c860ed11532872d6dcc4700a1118b429fa9670429",
+  "source_modality": "mri",
+  "original_pairs": [],
+  "prediction_duplicate_of": null,
+  "note": "Rows are algorithm-retained predictions, including reference-incorrect pairs; no truth-conditioned filtering"
+}

@@ -1,0 +1,161 @@
+{
+  "status": "preparation_started_matching_not_run",
+  "new_planes_y_mm": [
+    -20.0,
+    35.0
+  ],
+  "selection_reason": "Previously used alignment-review planes; no matching results used to select slices",
+  "specimen_scope": "Two additional slices of the SAME BigBrain specimen, not new subjects",
+  "shared_grid_spacing_mm": 0.2,
+  "fixed_transform": {
+    "angle": 20.0,
+    "scale": 1.15,
+    "shift": [
+      40.0,
+      25.0
+    ]
+  },
+  "random_seed": 42,
+  "random_parameters": [
+    {
+      "angle": 16.437362913357802,
+      "scale": 1.0036074539132183,
+      "shift": [
+        -7,
+        36
+      ]
+    },
+    {
+      "angle": 11.842081743561835,
+      "scale": 0.8829620717606773,
+      "shift": [
+        3,
+        48
+      ]
+    },
+    {
+      "angle": 15.668382119421182,
+      "scale": 1.1251225068469337,
+      "shift": [
+        1,
+        -38
+      ]
+    },
+    {
+      "angle": -2.9768437262659724,
+      "scale": 0.9797793084814034,
+      "shift": [
+        -32,
+        43
+      ]
+    },
+    {
+      "angle": 8.63190720483987,
+      "scale": 1.1379665646447905,
+      "shift": [
+        5,
+        -6
+      ]
+    }
+  ],
+  "experiment": "Frozen MIND-style descriptors + source top-3 + one-to-one relational similarity consensus",
+  "mind_config": {
+    "name": "mind2d_context_v1",
+    "radii_working_px": [
+      16.0,
+      24.0,
+      36.0
+    ],
+    "angles_clockwise_degrees": [
+      0,
+      30,
+      60,
+      90,
+      120,
+      150,
+      180,
+      210,
+      240,
+      270,
+      300,
+      330
+    ],
+    "canonical_side": 41,
+    "context_centres": [
+      -12,
+      -6,
+      0,
+      6,
+      12
+    ],
+    "offsets_col_row": [
+      [
+        4,
+        0
+      ],
+      [
+        -4,
+        0
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        -4
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        -4,
+        4
+      ],
+      [
+        4,
+        -4
+      ],
+      [
+        -4,
+        -4
+      ]
+    ],
+    "ssd_gaussian_sigma": 1.0,
+    "ssd_kernel_side": 5,
+    "presmoothing": "sigma=max(0.7, radius/20*0.7), truncate=4; full support required",
+    "normalization": "exp(-SSD/mean cardinal SSD), divide channel max, flatten and L2",
+    "similarity": "max cosine: source angle 0, all target angles and all 3x3 radius pairs",
+    "caveat": "2D MIND-style adaptation; not original dense 3D MIND or MIND-SSC; scores not probabilities"
+  },
+  "relational_config": {
+    "top_k": 3,
+    "min_similarity": 0.75,
+    "residual_target_px": 6.0,
+    "minimum_consensus": 4,
+    "hypotheses": "Exhaustive two-proposal similarity fits; distinct source and target",
+    "assignment": "Maximum cardinality one-to-one among residual<6 proposals, then minimum squared residual",
+    "selection": "Most final assigned pairs, then smallest squared residual, then largest cosine sum",
+    "refinement": "At most three assignment/refit iterations; residual<6; noncollinear on both sides",
+    "pruning": "Rank initial support upper bounds; skip hypotheses below best final count; heuristic after refits, not global optimality guarantee",
+    "reference_access": "None during proposal selection, hypothesis ranking or fit",
+    "caveat": "New deterministic geometry solver; mutual proposals also run through it as a solver control"
+  },
+  "evaluation_thresholds_mm": [
+    2.0,
+    5.0
+  ],
+  "reference_access": "Only evaluator after predictions frozen",
+  "visual_review_gate": "New prepared images must be reviewed by user before matching",
+  "python": "3.12.3",
+  "frozen_source_sha256": {
+    "landmarks/mind.py": "e6e419331d0801774546d915c663878c490168766cc151980f4b7b0049ef863e",
+    "landmarks/relational.py": "5149e37781458bbd232e6973944be6ceb4e638295d99cf45ab2763d60a21edbc",
+    "landmarks/candidates.py": "29c2414c266cb6a88e96428ed859e1e03024adde7e7f9ea6f54db80eb8564aaf",
+    "landmarks/masking.py": "567ef4e9b0b3eeb7605da313e7fe823f1cb5b5d86d9f7ecf912be36c90a466c7",
+    "landmarks/matching.py": "fc06bfe9b816d186a8e0718e2fede36a9925fcf8b91c5c095dfa340087b37c41",
+    "landmarks/planes.py": "6b7ee6e30ab06ad56add4b77fbfee388ecba03421a42b30395e6cdd5c781733d",
+    "landmarks/transforms.py": "fb8b32db6f5b9727008cea23760969ca45e01ea2aee5262ff78daf9ec0b69086"
+  }
+}

@@ -1,0 +1,7 @@
+pair,mutual,distinctive,retained,retained_within_2mm,retained_within_5mm,status
+coronal_y8_demo,29,9,0,0,0,insufficient_consensus
+pair_001,30,6,0,0,0,insufficient_consensus
+pair_002,36,4,0,0,0,insufficient_consensus
+pair_003,30,7,0,0,0,insufficient_consensus
+pair_004,32,11,5,4,5,estimated_model_not_anatomically_verified
+pair_005,29,4,0,0,0,insufficient_consensus

@@ -1,0 +1,16 @@
+{
+  "variant": "mutual_relational",
+  "description": "Mutual + relational geometry",
+  "geometry": {
+    "status": "insufficient_consensus",
+    "minimum_consensus": 4,
+    "residual_threshold_histology_px": 6.0,
+    "proposals": 30,
+    "hypotheses_tested": 435,
+    "valid_pair_hypotheses": 435,
+    "assignment_refinements": 0
+  },
+  "inference_seconds": 0.0027461209992907243,
+  "source_prediction_sha256": "5c925191df244b5091a21f8d0adbb00270c7fbff5e07932c2707f7a395ce0bf0",
+  "reference_access": "None before all experiment predictions frozen"
+}

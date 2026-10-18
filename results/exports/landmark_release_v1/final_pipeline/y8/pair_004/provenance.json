@@ -1,0 +1,71 @@
+{
+  "source_prediction": "results/matching/relational_v1/pair_004/top3_relational/predictions.npz",
+  "source_prediction_sha256": "6ff209d5f6eebbb49996dae50be4554938c974d3f4ef81335068ab76b449ca47",
+  "score_source": "results/matching/mind_v1/pair_004/predictions.npz",
+  "reference_geometry": "results/random_pairs/y8_seed42/pair_004/truth/geometry.json",
+  "evaluated_image_pair": "results/random_pairs/y8_seed42/pair_004/inputs.npz",
+  "source_evaluation": "results/matching/relational_v1/pair_004/top3_relational/evaluation.json",
+  "csv_origin": "exported_from_saved_prediction",
+  "csv_sha256": "b09c8e2304a5f7b52d9e8040926076082f5cfa28006ce648eb6b0d1ac593dfcd",
+  "source_modality": "mri",
+  "original_pairs": [
+    [
+      1,
+      22
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      8,
+      16
+    ],
+    [
+      11,
+      119
+    ],
+    [
+      17,
+      14
+    ],
+    [
+      20,
+      58
+    ],
+    [
+      21,
+      3
+    ],
+    [
+      25,
+      69
+    ],
+    [
+      29,
+      63
+    ],
+    [
+      31,
+      118
+    ],
+    [
+      44,
+      107
+    ],
+    [
+      73,
+      6
+    ],
+    [
+      78,
+      45
+    ],
+    [
+      79,
+      70
+    ]
+  ],
+  "prediction_duplicate_of": null,
+  "note": "Rows are algorithm-retained predictions, including reference-incorrect pairs; no truth-conditioned filtering"
+}

@@ -1,0 +1,39 @@
+{
+  "variant": "mutual_ransac",
+  "description": "Mutual + seeded RANSAC",
+  "geometry": {
+    "status": "estimated_model_not_anatomically_verified",
+    "minimum_consensus": 4,
+    "residual_threshold_histology_px": 6.0,
+    "seed": 0,
+    "max_trials": 5000,
+    "raw_consensus": 4,
+    "retained": 4,
+    "scale": 1.118548913864976,
+    "clockwise_degrees": 7.104147327854627,
+    "translation_col_row_px": [
+      125.2325850894888,
+      29.684704973452654
+    ],
+    "matrix": [
+      [
+        1.1099618009356624,
+        -0.13833464198160475,
+        125.2325850894888
+      ],
+      [
+        0.13833464198160483,
+        1.1099618009356622,
+        29.684704973452654
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "inference_seconds": 0.1280202920006559,
+  "source_prediction_sha256": "abb21dd421cbbc78fa7e82f27fd8fa2404b2d5e2e8e128eca88a0dc9176f4a42",
+  "reference_access": "None before all experiment predictions frozen"
+}

@@ -1,0 +1,21 @@
+{
+  "all_saved_predictions_unchanged": true,
+  "current_retained_pairs_reproduced": true,
+  "all_variants_frozen_before_any_reference_read": true,
+  "input_sha256": {
+    "/home/dell/PycharmProjects/xmarksthespot_testing/results/matching/mind_v1/coronal_y8_demo/predictions.npz": "74d0c3435219b2bd8ca8338ac352631e2649c0cd40f47be3d3382b645a2e9c80",
+    "/home/dell/PycharmProjects/xmarksthespot_testing/results/matching/mind_v1/pair_001/predictions.npz": "0a907937d83b0afa8b226f28118958fe78955cabe95d033a4c5d37949fdbd639",
+    "/home/dell/PycharmProjects/xmarksthespot_testing/results/matching/mind_v1/pair_002/predictions.npz": "079f80766ba4167ae4cfe4a736c1998a9ab8e0ae803e2f17b1a2d4dae6067db5",
+    "/home/dell/PycharmProjects/xmarksthespot_testing/results/matching/mind_v1/pair_003/predictions.npz": "5c925191df244b5091a21f8d0adbb00270c7fbff5e07932c2707f7a395ce0bf0",
+    "/home/dell/PycharmProjects/xmarksthespot_testing/results/matching/mind_v1/pair_004/predictions.npz": "4946b112357505f673a0f4e5d3ad642f1e1688d769ec22655ae16a44c1ad02a2",
+    "/home/dell/PycharmProjects/xmarksthespot_testing/results/matching/mind_v1/pair_005/predictions.npz": "abb21dd421cbbc78fa7e82f27fd8fa2404b2d5e2e8e128eca88a0dc9176f4a42",
+    "/home/dell/PycharmProjects/xmarksthespot_testing/results/matching/polar_backend_check/coronal_y8_demo/predictions.npz": "55e87de41ed39cec402a8d8bebea0a6c999feb47f05c9e0646041235f5bbf7cf",
+    "/home/dell/PycharmProjects/xmarksthespot_testing/results/matching/polar_backend_check/pair_001/predictions.npz": "590bd693ad2ef7ecef070e9520998760a22d7eda902873ae233ec41ab74060b8",
+    "/home/dell/PycharmProjects/xmarksthespot_testing/results/matching/polar_backend_check/pair_002/predictions.npz": "f6b72ebfd1fe19b669319f9bc5160923fcc0ea50dc462c4a636752252e4c8478",
+    "/home/dell/PycharmProjects/xmarksthespot_testing/results/matching/polar_backend_check/pair_003/predictions.npz": "ca7b3a24a307d6cecee14f7dbad58865b49f4da17435cef1bc606bd03932acd8",
+    "/home/dell/PycharmProjects/xmarksthespot_testing/results/matching/polar_backend_check/pair_004/predictions.npz": "f369c34d30e740ef57f4453ea129996d6f6f59fcdafe84d8e6c064aedec4dec4",
+    "/home/dell/PycharmProjects/xmarksthespot_testing/results/matching/polar_backend_check/pair_005/predictions.npz": "4d031741aba18fea9d32648788d19cd6de94131996a8b8a0531db8e6d2be3bd0",
+    "/home/dell/PycharmProjects/xmarksthespot_testing/results/matching/mind_v1/histology_control_predictions.npz": "c0734a5aadaf3c32f9fb29e89572868575db005d487b7c7199c71cfb733dc74c",
+    "/home/dell/PycharmProjects/xmarksthespot_testing/results/matching/polar_backend_check/histology_control_predictions.npz": "ab28d62b5dbfbd03b76c2e3711626301dd2c0523a7d1a9071aeadc2b97f4ab79"
+  }
+}

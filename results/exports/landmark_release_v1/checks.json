@@ -1,0 +1,22 @@
+{
+  "saved_prediction_artifacts": 100,
+  "csv_files": 100,
+  "final_pipeline_csvs": 19,
+  "historical_csvs": 67,
+  "control_csvs": 14,
+  "existing_csvs_verified_and_reused": 34,
+  "all_saved_metrics_verified": true,
+  "all_input_hashes_unchanged": true,
+  "no_matching_or_refitting_run": true,
+  "primary_aggregate": {
+    "image_pairs": 19,
+    "retained": 207,
+    "within_2mm": 204,
+    "within_5mm": 207,
+    "scope": "Three anatomical planes, one specimen; reused transformations; not independent subjects or all possible transformations",
+    "fraction_within_2mm": 0.9855072463768116,
+    "same_count_random_expected_fraction_within_2mm": 0.0034541062801932364,
+    "fraction_within_5mm": 1.0,
+    "same_count_random_expected_fraction_within_5mm": 0.012367149758454106
+  }
+}

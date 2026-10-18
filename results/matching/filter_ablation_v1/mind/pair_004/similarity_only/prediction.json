@@ -1,0 +1,39 @@
+{
+  "variant": "similarity_only",
+  "description": "Mutual + cosine >=0.75; no ratio test",
+  "geometric_filter": {
+    "status": "estimated_model_not_anatomically_verified",
+    "minimum_consensus": 4,
+    "residual_threshold_histology_px": 6.0,
+    "seed": 0,
+    "max_trials": 5000,
+    "raw_consensus": 11,
+    "retained": 11,
+    "scale": 0.9618389543523255,
+    "clockwise_degrees": -2.376337219155015,
+    "translation_col_row_px": [
+      18.961745597280014,
+      135.55760330967667
+    ],
+    "matrix": [
+      [
+        0.961011810614823,
+        0.039880746838469164,
+        18.961745597280014
+      ],
+      [
+        -0.03988074683846913,
+        0.9610118106148234,
+        135.55760330967667
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "ransac_seconds": 0.008340427999428357,
+  "source_prediction_sha256": "4946b112357505f673a0f4e5d3ad642f1e1688d769ec22655ae16a44c1ad02a2",
+  "truth_access": "None before predictions saved"
+}

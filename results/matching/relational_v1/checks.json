@@ -1,0 +1,13 @@
+{
+  "predictions_frozen_before_any_reference_access": true,
+  "unchanged_source_hashes": {
+    "coronal_y8_demo": "74d0c3435219b2bd8ca8338ac352631e2649c0cd40f47be3d3382b645a2e9c80",
+    "pair_001": "0a907937d83b0afa8b226f28118958fe78955cabe95d033a4c5d37949fdbd639",
+    "pair_002": "079f80766ba4167ae4cfe4a736c1998a9ab8e0ae803e2f17b1a2d4dae6067db5",
+    "pair_003": "5c925191df244b5091a21f8d0adbb00270c7fbff5e07932c2707f7a395ce0bf0",
+    "pair_004": "4946b112357505f673a0f4e5d3ad642f1e1688d769ec22655ae16a44c1ad02a2",
+    "pair_005": "abb21dd421cbbc78fa7e82f27fd8fa2404b2d5e2e8e128eca88a0dc9176f4a42",
+    "histology_control": "c0734a5aadaf3c32f9fb29e89572868575db005d487b7c7199c71cfb733dc74c"
+  },
+  "seeded_mutual_control_reproduced": true
+}

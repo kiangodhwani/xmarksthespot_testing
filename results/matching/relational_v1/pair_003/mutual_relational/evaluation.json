@@ -1,0 +1,69 @@
+{
+  "case": "pair_003",
+  "variant": "mutual_relational",
+  "input": {
+    "count": 30,
+    "count_within_2mm": 3,
+    "count_within_5mm": 4,
+    "unique_sources_within_2mm": 3,
+    "chance_note": "No unique-pair random comparator for many-to-many proposal counts"
+  },
+  "retained": {
+    "count": 0,
+    "count_within_2mm": 0,
+    "count_within_5mm": 0,
+    "fraction_within_2mm": null,
+    "fraction_within_5mm": null,
+    "median_error_mm": null,
+    "correct_within_2mm_spread": {
+      "hull_area_mm2": 0.0,
+      "minor_major_spread_ratio": 0.0
+    },
+    "correct_hull_fraction_of_mri_mask_area": 0.0,
+    "random_candidate_pairing": null
+  },
+  "input_errors_mm": [
+    2.973416720938275,
+    97.82479055179071,
+    16.881227601870467,
+    55.69432883717172,
+    102.70335945740044,
+    77.33911307461817,
+    87.84001465161572,
+    64.31845931784339,
+    1.8030013898018036,
+    0.48635495595241485,
+    0.8781314193733273,
+    24.25496638494719,
+    94.46538567061069,
+    49.05625191368041,
+    50.07885917596729,
+    39.34655039905645,
+    44.991874891509795,
+    112.92360439711821,
+    65.59096068479938,
+    66.80695362953718,
+    82.79783073298061,
+    35.39381991352816,
+    42.990343782287844,
+    100.5181806524146,
+    103.4327427949037,
+    36.641797089219516,
+    70.8816223408976,
+    103.41663571009819,
+    97.27664927986773,
+    65.39186256827027
+  ],
+  "retained_errors_mm": [],
+  "transform_recovery": null,
+  "geometry": {
+    "status": "insufficient_consensus",
+    "minimum_consensus": 4,
+    "residual_threshold_histology_px": 6.0,
+    "proposals": 30,
+    "hypotheses_tested": 435,
+    "valid_pair_hypotheses": 435,
+    "assignment_refinements": 0
+  },
+  "inference_seconds": 0.0027461209992907243
+}

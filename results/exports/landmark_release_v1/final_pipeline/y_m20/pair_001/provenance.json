@@ -1,0 +1,51 @@
+{
+  "source_prediction": "results/validation/two_slices_v1/matching/y_m20/pair_001/predictions.npz",
+  "source_prediction_sha256": "9c132b64ce249d56f815f9d965a7e6b2586517660b219ff7b94dee647e320749",
+  "score_source": "results/validation/two_slices_v1/matching/y_m20/pair_001/predictions.npz",
+  "reference_geometry": "results/validation/two_slices_v1/y_m20/random_seed42/pair_001/truth/geometry.json",
+  "evaluated_image_pair": "results/validation/two_slices_v1/y_m20/random_seed42/pair_001/inputs.npz",
+  "source_evaluation": "results/validation/two_slices_v1/matching/y_m20/pair_001/evaluation.json",
+  "csv_origin": "copied_existing_verified_csv",
+  "csv_sha256": "45d1bba99d680d5cce776d3e451ed5a9022270075d7dc140ce443d695d8ed7d9",
+  "source_modality": "mri",
+  "original_pairs": [
+    [
+      0,
+      119
+    ],
+    [
+      3,
+      101
+    ],
+    [
+      5,
+      102
+    ],
+    [
+      15,
+      132
+    ],
+    [
+      19,
+      100
+    ],
+    [
+      23,
+      130
+    ],
+    [
+      42,
+      34
+    ],
+    [
+      45,
+      74
+    ],
+    [
+      64,
+      117
+    ]
+  ],
+  "prediction_duplicate_of": null,
+  "note": "Rows are algorithm-retained predictions, including reference-incorrect pairs; no truth-conditioned filtering"
+}

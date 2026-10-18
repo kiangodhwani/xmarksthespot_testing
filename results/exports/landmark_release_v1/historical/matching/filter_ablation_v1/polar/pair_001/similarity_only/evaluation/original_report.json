@@ -1,0 +1,57 @@
+{
+  "method": "polar",
+  "case": "pair_001",
+  "variant": "similarity_only",
+  "geometric_filter": {
+    "status": "insufficient_consensus",
+    "minimum_consensus": 4,
+    "residual_threshold_histology_px": 6.0,
+    "seed": 0,
+    "max_trials": 5000,
+    "raw_consensus": 3
+  },
+  "ransac_seconds": 0.2439593839990266,
+  "stages": {
+    "input": {
+      "count": 27,
+      "count_within_2mm": 2,
+      "count_within_5mm": 3,
+      "fraction_within_2mm": 0.07407407407407407,
+      "fraction_within_5mm": 0.1111111111111111,
+      "median_error_mm": 49.13370660830403,
+      "correct_within_2mm_spread": {
+        "hull_area_mm2": 0.0,
+        "minor_major_spread_ratio": 0.0
+      },
+      "correct_hull_fraction_of_mri_mask_area": 0.0,
+      "random_candidate_pairing": {
+        "trials": 200,
+        "mean_within_2mm": 0.0035185185185185185,
+        "mean_within_5mm": 0.013703703703703702,
+        "note": "Same count, independent unique candidate pairing; not a null distribution conditioned on RANSAC selection"
+      }
+    },
+    "retained": {
+      "count": 0,
+      "count_within_2mm": 0,
+      "count_within_5mm": 0,
+      "fraction_within_2mm": null,
+      "fraction_within_5mm": null,
+      "median_error_mm": null,
+      "correct_within_2mm_spread": {
+        "hull_area_mm2": 0.0,
+        "minor_major_spread_ratio": 0.0
+      },
+      "correct_hull_fraction_of_mri_mask_area": 0.0,
+      "random_candidate_pairing": null
+    }
+  },
+  "retained_reference_errors_mm": [],
+  "transform_recovery": null,
+  "model_with_majority_pairs_beyond_5mm": false,
+  "rejected_mutual_within_2mm": {
+    "ratio_only": 2,
+    "score_only": 0,
+    "both": 0
+  }
+}

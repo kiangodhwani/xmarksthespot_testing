@@ -1,0 +1,15 @@
+{
+  "variant": "current",
+  "description": "Mutual + cosine >=0.75 + distance ratio <0.9",
+  "geometric_filter": {
+    "status": "insufficient_consensus",
+    "minimum_consensus": 4,
+    "residual_threshold_histology_px": 6.0,
+    "seed": 0,
+    "max_trials": 5000,
+    "raw_consensus": 0
+  },
+  "ransac_seconds": 0.2410280949989101,
+  "source_prediction_sha256": "74d0c3435219b2bd8ca8338ac352631e2649c0cd40f47be3d3382b645a2e9c80",
+  "truth_access": "None before predictions saved"
+}

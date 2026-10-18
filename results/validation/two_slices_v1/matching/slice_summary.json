@@ -1,0 +1,34 @@
+[
+  {
+    "slice_id": "y_m20",
+    "cases": 6,
+    "models_returned": 6,
+    "retained": 60,
+    "within_2mm": 60,
+    "within_5mm": 60,
+    "recovery_median_error_mm_by_case": {
+      "fixed": 0.8668795458536316,
+      "pair_001": 1.1059742185274657,
+      "pair_002": 0.9187429513379942,
+      "pair_003": 1.226056288746946,
+      "pair_004": 0.7894008795936195,
+      "pair_005": 0.9289469235146399
+    }
+  },
+  {
+    "slice_id": "y35",
+    "cases": 6,
+    "models_returned": 6,
+    "retained": 73,
+    "within_2mm": 73,
+    "within_5mm": 73,
+    "recovery_median_error_mm_by_case": {
+      "fixed": 0.6526972282380358,
+      "pair_001": 0.35145163556562165,
+      "pair_002": 0.5926600270661592,
+      "pair_003": 0.46252544857602457,
+      "pair_004": 0.3009395443035985,
+      "pair_005": 0.32995788841871027
+    }
+  }
+]

@@ -1,0 +1,8 @@
+id,source_candidate_index,target_candidate_index,reference_error_mm,within_2mm,within_5mm
+1,0,126,1.380686138845071,True,True
+2,3,110,1.307299494478237,True,True
+3,5,112,0.2959888662279204,True,True
+4,6,111,0.6242723990920981,True,True
+5,45,74,1.3597276511310934,True,True
+6,78,54,1.5002409395591028,True,True
+7,104,132,1.3236329715921171,True,True

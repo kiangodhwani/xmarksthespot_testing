@@ -1,0 +1,39 @@
+{
+  "variant": "all_mutual",
+  "description": "All valid mutual nearest neighbours; no score or ratio cutoff",
+  "geometric_filter": {
+    "status": "estimated_model_not_anatomically_verified",
+    "minimum_consensus": 4,
+    "residual_threshold_histology_px": 6.0,
+    "seed": 0,
+    "max_trials": 5000,
+    "raw_consensus": 6,
+    "retained": 6,
+    "scale": 0.9668622917768948,
+    "clockwise_degrees": 17.430031911870753,
+    "translation_col_row_px": [
+      197.41048468320707,
+      96.33699889063348
+    ],
+    "matrix": [
+      [
+        0.9224673143889432,
+        -0.28961482203803024,
+        197.41048468320707
+      ],
+      [
+        0.2896148220380302,
+        0.922467314388943,
+        96.33699889063348
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "ransac_seconds": 0.042777209000632865,
+  "source_prediction_sha256": "0a907937d83b0afa8b226f28118958fe78955cabe95d033a4c5d37949fdbd639",
+  "truth_access": "None before predictions saved"
+}

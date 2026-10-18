@@ -1,0 +1,54 @@
+{
+  "count": 11,
+  "count_within_2mm": 11,
+  "count_within_5mm": 11,
+  "fraction_within_2mm": 1.0,
+  "fraction_within_5mm": 1.0,
+  "median_error_mm": 1.2080481044230287,
+  "mean_error_mm": 1.045421702879551,
+  "max_error_mm": 1.6401128007723536,
+  "correct_within_2mm_spread": {
+    "hull_area_mm2": 6820.62,
+    "minor_major_spread_ratio": 0.48028601210412564
+  },
+  "correct_pairs_ge4_noncollinear": true,
+  "correct_hull_area_divided_by_source_mask_area": 0.7904299455325066,
+  "random_candidate_pairing": {
+    "trials": 200,
+    "mean_within_2mm": 0.00045454545454545455,
+    "mean_within_5mm": 0.010909090909090908,
+    "note": "Same count, independent unique candidate pairing; not a null distribution conditioned on RANSAC selection"
+  },
+  "chance_metric_origin": "preserved_saved_evaluation",
+  "observed_exceeds_random_mean_2mm": true,
+  "observed_exceeds_random_mean_5mm": true,
+  "transform_recovery": {
+    "rotation_absolute_error_degrees": 0.22818889036761902,
+    "scale_absolute_error": 0.006270390981110596,
+    "effective_matrix_translation_error_px": 2.8087609846930666,
+    "median_whole_candidate_transform_error_mm": 0.9289469235146399
+  },
+  "transform_parameters": {
+    "planted_clockwise_degrees": 8.63190720483987,
+    "planted_scale": 1.1379665646447905,
+    "estimated_clockwise_degrees": 8.403718314472245,
+    "estimated_scale": 1.13169617366368,
+    "estimated_source_to_target_matrix": [
+      [
+        1.1195449827199164,
+        -0.1653942597301254,
+        130.88204089513027
+      ],
+      [
+        0.16539425973012534,
+        1.1195449827199164,
+        10.648105982615903
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  }
+}

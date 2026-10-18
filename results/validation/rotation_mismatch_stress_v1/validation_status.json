@@ -1,0 +1,13 @@
+{
+  "status": "matching_complete_results_await_user_review",
+  "preparation_accepted": true,
+  "retained": 11,
+  "within_2mm": 11,
+  "within_5mm": 11,
+  "median_pair_error_mm": 0.9190437154417803,
+  "median_candidate_transform_error_mm": 0.569959114851822,
+  "histology_control_retained": 117,
+  "histology_control_within_2mm": 117,
+  "parameters_tuned": false,
+  "tests_passed": 32
+}

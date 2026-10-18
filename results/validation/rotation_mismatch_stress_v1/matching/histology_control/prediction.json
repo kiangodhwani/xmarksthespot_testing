@@ -1,0 +1,103 @@
+{
+  "case": "histology_control",
+  "candidate_counts": {
+    "source": 180,
+    "target": 165
+  },
+  "geometry": {
+    "status": "estimated_model_not_anatomically_verified",
+    "minimum_consensus": 4,
+    "residual_threshold_histology_px": 6.0,
+    "proposals": 540,
+    "hypotheses_tested": 145530,
+    "valid_pair_hypotheses": 143623,
+    "assignment_refinements": 2435,
+    "retained": 117
+  },
+  "inference_seconds": 11.124071281999932,
+  "source_kind": "histology",
+  "mind_config": {
+    "name": "mind2d_context_v1",
+    "radii_working_px": [
+      16.0,
+      24.0,
+      36.0
+    ],
+    "angles_clockwise_degrees": [
+      0,
+      30,
+      60,
+      90,
+      120,
+      150,
+      180,
+      210,
+      240,
+      270,
+      300,
+      330
+    ],
+    "canonical_side": 41,
+    "context_centres": [
+      -12,
+      -6,
+      0,
+      6,
+      12
+    ],
+    "offsets_col_row": [
+      [
+        4,
+        0
+      ],
+      [
+        -4,
+        0
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        -4
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        -4,
+        4
+      ],
+      [
+        4,
+        -4
+      ],
+      [
+        -4,
+        -4
+      ]
+    ],
+    "ssd_gaussian_sigma": 1.0,
+    "ssd_kernel_side": 5,
+    "presmoothing": "sigma=max(0.7, radius/20*0.7), truncate=4; full support required",
+    "normalization": "exp(-SSD/mean cardinal SSD), divide channel max, flatten and L2",
+    "similarity": "max cosine: source angle 0, all target angles and all 3x3 radius pairs",
+    "caveat": "2D MIND-style adaptation; not original dense 3D MIND or MIND-SSC; scores not probabilities"
+  },
+  "relational_config": {
+    "top_k": 3,
+    "min_similarity": 0.75,
+    "residual_target_px": 6.0,
+    "minimum_consensus": 4,
+    "hypotheses": "Exhaustive two-proposal similarity fits; distinct source and target",
+    "assignment": "Maximum cardinality one-to-one among residual<6 proposals, then minimum squared residual",
+    "selection": "Most final assigned pairs, then smallest squared residual, then largest cosine sum",
+    "refinement": "At most three assignment/refit iterations; residual<6; noncollinear on both sides",
+    "pruning": "Rank initial support upper bounds; skip hypotheses below best final count; heuristic after refits, not global optimality guarantee",
+    "reference_access": "None during proposal selection, hypothesis ranking or fit",
+    "caveat": "New deterministic geometry solver; mutual proposals also run through it as a solver control"
+  },
+  "truth_access": "None; both predictions saved before reference scoring"
+}

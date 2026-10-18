@@ -1,0 +1,17 @@
+{
+  "both_predictions_before_reference_geometry": true,
+  "input_and_algorithm_hashes_unchanged": true,
+  "configuration_and_thresholds_unchanged": true,
+  "assignment_audits": [
+    {
+      "case": "stress",
+      "one_to_one_and_residual_rules_verified": true,
+      "max_model_residual_target_px": 5.890982550092411
+    },
+    {
+      "case": "histology_control",
+      "one_to_one_and_residual_rules_verified": true,
+      "max_model_residual_target_px": 5.955630382600947
+    }
+  ]
+}

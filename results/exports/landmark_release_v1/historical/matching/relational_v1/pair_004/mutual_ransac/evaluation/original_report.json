@@ -1,0 +1,116 @@
+{
+  "case": "pair_004",
+  "variant": "mutual_ransac",
+  "input": {
+    "count": 32,
+    "count_within_2mm": 11,
+    "count_within_5mm": 12,
+    "unique_sources_within_2mm": 11,
+    "chance_note": "No unique-pair random comparator for many-to-many proposal counts"
+  },
+  "retained": {
+    "count": 11,
+    "count_within_2mm": 11,
+    "count_within_5mm": 11,
+    "fraction_within_2mm": 1.0,
+    "fraction_within_5mm": 1.0,
+    "median_error_mm": 0.9888910198096994,
+    "correct_within_2mm_spread": {
+      "hull_area_mm2": 3526.8200000000006,
+      "minor_major_spread_ratio": 0.8446932102328717
+    },
+    "correct_hull_fraction_of_mri_mask_area": 0.4289783784835746,
+    "random_candidate_pairing": {
+      "trials": 200,
+      "mean_within_2mm": 0.002727272727272727,
+      "mean_within_5mm": 0.007272727272727273,
+      "note": "Same count, independent unique candidate pairing; not a null distribution conditioned on RANSAC selection"
+    }
+  },
+  "input_errors_mm": [
+    41.72441455955337,
+    0.9888910198096994,
+    1.2727733062522595,
+    1.8395457274739313,
+    2.852919334102125,
+    1.383908517850492,
+    0.47106537835344675,
+    88.10361228195224,
+    53.730429571613186,
+    33.23038559739752,
+    34.35182630030867,
+    1.3359934187976954,
+    79.75006430178131,
+    0.9051496936600708,
+    41.1515360613053,
+    94.42625243465898,
+    49.1170889781382,
+    81.62908831684999,
+    32.68526830890132,
+    1.156496703905089,
+    23.021399665597997,
+    27.710732825448126,
+    63.63601572727213,
+    103.53318056420156,
+    36.64921577663283,
+    58.875482708782016,
+    9.205632576272915,
+    0.5020104986527655,
+    0.4069813535676415,
+    0.9016092214932047,
+    52.03083359894883,
+    77.07101800312086
+  ],
+  "retained_errors_mm": [
+    0.9888910198096994,
+    1.2727733062522595,
+    1.8395457274739313,
+    1.383908517850492,
+    0.47106537835344675,
+    1.3359934187976954,
+    0.9051496936600708,
+    1.156496703905089,
+    0.5020104986527655,
+    0.4069813535676415,
+    0.9016092214932047
+  ],
+  "transform_recovery": {
+    "rotation_absolute_error_degrees": 0.6005065071109641,
+    "scale_absolute_error": 0.017940354129077907,
+    "effective_matrix_translation_error_px": 8.972675456688364,
+    "median_whole_candidate_transform_error_mm": 0.8563776148968321
+  },
+  "geometry": {
+    "status": "estimated_model_not_anatomically_verified",
+    "minimum_consensus": 4,
+    "residual_threshold_histology_px": 6.0,
+    "seed": 0,
+    "max_trials": 5000,
+    "raw_consensus": 11,
+    "retained": 11,
+    "scale": 0.9618389543523255,
+    "clockwise_degrees": -2.376337219155015,
+    "translation_col_row_px": [
+      18.961745597280014,
+      135.55760330967667
+    ],
+    "matrix": [
+      [
+        0.961011810614823,
+        0.039880746838469164,
+        18.961745597280014
+      ],
+      [
+        -0.03988074683846913,
+        0.9610118106148234,
+        135.55760330967667
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "inference_seconds": 0.008247549001680454
+}

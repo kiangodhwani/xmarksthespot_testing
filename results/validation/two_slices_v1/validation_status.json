@@ -1,0 +1,13 @@
+{
+  "status": "matching_complete_results_await_user_review",
+  "preparations_accepted": true,
+  "source_slices": 2,
+  "mri_histology_cases": 12,
+  "models_returned": 12,
+  "retained": 133,
+  "within_2mm": 133,
+  "within_5mm": 133,
+  "parameters_tuned": false,
+  "frozen_source_hashes_verified": true,
+  "tests_passed": 32
+}

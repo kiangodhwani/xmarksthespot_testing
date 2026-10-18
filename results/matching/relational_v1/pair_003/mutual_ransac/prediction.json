@@ -1,0 +1,15 @@
+{
+  "variant": "mutual_ransac",
+  "description": "Mutual + seeded RANSAC",
+  "geometry": {
+    "status": "insufficient_consensus",
+    "minimum_consensus": 4,
+    "residual_threshold_histology_px": 6.0,
+    "seed": 0,
+    "max_trials": 5000,
+    "raw_consensus": 3
+  },
+  "inference_seconds": 0.24056567600018752,
+  "source_prediction_sha256": "5c925191df244b5091a21f8d0adbb00270c7fbff5e07932c2707f7a395ce0bf0",
+  "reference_access": "None before all experiment predictions frozen"
+}

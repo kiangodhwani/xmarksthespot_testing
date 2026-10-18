@@ -1,0 +1,14 @@
+{
+  "source_candidates": 86,
+  "target_candidates": 180,
+  "sources_with_any_target_within_2mm": 40,
+  "sources_with_score_eligible_target_within_2mm": 40,
+  "top1_sources_with_partner_within_2mm": 14,
+  "top3_sources_with_partner_within_2mm": 17,
+  "top5_sources_with_partner_within_2mm": 19,
+  "sources_with_any_target_within_5mm": 80,
+  "sources_with_score_eligible_target_within_5mm": 80,
+  "top1_sources_with_partner_within_5mm": 17,
+  "top3_sources_with_partner_within_5mm": 23,
+  "top5_sources_with_partner_within_5mm": 25
+}

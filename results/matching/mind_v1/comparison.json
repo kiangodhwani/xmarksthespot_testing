@@ -1,0 +1,291 @@
+{
+  "rows": [
+    {
+      "method": "polar",
+      "pair": "coronal_y8_demo",
+      "inference_seconds": 0.7801123190001817,
+      "mutual_count": 29,
+      "mutual_count_within_2mm": 2,
+      "mutual_count_within_5mm": 3,
+      "mutual_median_error_mm": 53.77213964292265,
+      "distinctive_count": 11,
+      "distinctive_count_within_2mm": 1,
+      "distinctive_count_within_5mm": 2,
+      "distinctive_median_error_mm": 43.75181183849577,
+      "retained_count": 0,
+      "retained_count_within_2mm": 0,
+      "retained_count_within_5mm": 0,
+      "retained_median_error_mm": null
+    },
+    {
+      "method": "polar",
+      "pair": "pair_001",
+      "inference_seconds": 0.9121389170013572,
+      "mutual_count": 27,
+      "mutual_count_within_2mm": 2,
+      "mutual_count_within_5mm": 3,
+      "mutual_median_error_mm": 49.13370660830403,
+      "distinctive_count": 5,
+      "distinctive_count_within_2mm": 0,
+      "distinctive_count_within_5mm": 0,
+      "distinctive_median_error_mm": 42.8016030585757,
+      "retained_count": 0,
+      "retained_count_within_2mm": 0,
+      "retained_count_within_5mm": 0,
+      "retained_median_error_mm": null
+    },
+    {
+      "method": "polar",
+      "pair": "pair_002",
+      "inference_seconds": 0.8573094700004731,
+      "mutual_count": 35,
+      "mutual_count_within_2mm": 3,
+      "mutual_count_within_5mm": 4,
+      "mutual_median_error_mm": 51.59596126978102,
+      "distinctive_count": 10,
+      "distinctive_count_within_2mm": 1,
+      "distinctive_count_within_5mm": 1,
+      "distinctive_median_error_mm": 54.265550958129225,
+      "retained_count": 0,
+      "retained_count_within_2mm": 0,
+      "retained_count_within_5mm": 0,
+      "retained_median_error_mm": null
+    },
+    {
+      "method": "polar",
+      "pair": "pair_003",
+      "inference_seconds": 1.0460513180005364,
+      "mutual_count": 30,
+      "mutual_count_within_2mm": 1,
+      "mutual_count_within_5mm": 2,
+      "mutual_median_error_mm": 60.00315054977005,
+      "distinctive_count": 9,
+      "distinctive_count_within_2mm": 0,
+      "distinctive_count_within_5mm": 0,
+      "distinctive_median_error_mm": 63.75422413825273,
+      "retained_count": 0,
+      "retained_count_within_2mm": 0,
+      "retained_count_within_5mm": 0,
+      "retained_median_error_mm": null
+    },
+    {
+      "method": "polar",
+      "pair": "pair_004",
+      "inference_seconds": 0.6172793839996302,
+      "mutual_count": 35,
+      "mutual_count_within_2mm": 7,
+      "mutual_count_within_5mm": 7,
+      "mutual_median_error_mm": 42.712727633842576,
+      "distinctive_count": 7,
+      "distinctive_count_within_2mm": 4,
+      "distinctive_count_within_5mm": 4,
+      "distinctive_median_error_mm": 1.3804620732306108,
+      "retained_count": 4,
+      "retained_count_within_2mm": 4,
+      "retained_count_within_5mm": 4,
+      "retained_median_error_mm": 0.9683761150865617
+    },
+    {
+      "method": "polar",
+      "pair": "pair_005",
+      "inference_seconds": 0.6949218770005245,
+      "mutual_count": 33,
+      "mutual_count_within_2mm": 5,
+      "mutual_count_within_5mm": 6,
+      "mutual_median_error_mm": 52.010600027334306,
+      "distinctive_count": 10,
+      "distinctive_count_within_2mm": 3,
+      "distinctive_count_within_5mm": 4,
+      "distinctive_median_error_mm": 27.05867862074267,
+      "retained_count": 0,
+      "retained_count_within_2mm": 0,
+      "retained_count_within_5mm": 0,
+      "retained_median_error_mm": null
+    },
+    {
+      "method": "mind",
+      "pair": "coronal_y8_demo",
+      "inference_seconds": 4.096539355999994,
+      "mutual_count": 29,
+      "mutual_count_within_2mm": 4,
+      "mutual_count_within_5mm": 6,
+      "mutual_median_error_mm": 63.96967573091218,
+      "distinctive_count": 9,
+      "distinctive_count_within_2mm": 1,
+      "distinctive_count_within_5mm": 2,
+      "distinctive_median_error_mm": 63.96967573091218,
+      "retained_count": 0,
+      "retained_count_within_2mm": 0,
+      "retained_count_within_5mm": 0,
+      "retained_median_error_mm": null
+    },
+    {
+      "method": "mind",
+      "pair": "pair_001",
+      "inference_seconds": 3.988355842000601,
+      "mutual_count": 30,
+      "mutual_count_within_2mm": 6,
+      "mutual_count_within_5mm": 7,
+      "mutual_median_error_mm": 50.063138525593246,
+      "distinctive_count": 6,
+      "distinctive_count_within_2mm": 1,
+      "distinctive_count_within_5mm": 2,
+      "distinctive_median_error_mm": 58.142782188480865,
+      "retained_count": 0,
+      "retained_count_within_2mm": 0,
+      "retained_count_within_5mm": 0,
+      "retained_median_error_mm": null
+    },
+    {
+      "method": "mind",
+      "pair": "pair_002",
+      "inference_seconds": 3.6022562849993847,
+      "mutual_count": 36,
+      "mutual_count_within_2mm": 5,
+      "mutual_count_within_5mm": 7,
+      "mutual_median_error_mm": 40.113446523804924,
+      "distinctive_count": 4,
+      "distinctive_count_within_2mm": 1,
+      "distinctive_count_within_5mm": 1,
+      "distinctive_median_error_mm": 69.77017555850344,
+      "retained_count": 0,
+      "retained_count_within_2mm": 0,
+      "retained_count_within_5mm": 0,
+      "retained_median_error_mm": null
+    },
+    {
+      "method": "mind",
+      "pair": "pair_003",
+      "inference_seconds": 3.909633745000974,
+      "mutual_count": 30,
+      "mutual_count_within_2mm": 3,
+      "mutual_count_within_5mm": 4,
+      "mutual_median_error_mm": 64.85516094305683,
+      "distinctive_count": 7,
+      "distinctive_count_within_2mm": 1,
+      "distinctive_count_within_5mm": 1,
+      "distinctive_median_error_mm": 66.80695362953718,
+      "retained_count": 0,
+      "retained_count_within_2mm": 0,
+      "retained_count_within_5mm": 0,
+      "retained_median_error_mm": null
+    },
+    {
+      "method": "mind",
+      "pair": "pair_004",
+      "inference_seconds": 3.3850005970016355,
+      "mutual_count": 32,
+      "mutual_count_within_2mm": 11,
+      "mutual_count_within_5mm": 12,
+      "mutual_median_error_mm": 32.95782695314942,
+      "distinctive_count": 11,
+      "distinctive_count_within_2mm": 5,
+      "distinctive_count_within_5mm": 6,
+      "distinctive_median_error_mm": 2.852919334102125,
+      "retained_count": 5,
+      "retained_count_within_2mm": 4,
+      "retained_count_within_5mm": 5,
+      "retained_median_error_mm": 1.2727733062522595
+    },
+    {
+      "method": "mind",
+      "pair": "pair_005",
+      "inference_seconds": 3.812830460999976,
+      "mutual_count": 29,
+      "mutual_count_within_2mm": 5,
+      "mutual_count_within_5mm": 7,
+      "mutual_median_error_mm": 52.585387805601535,
+      "distinctive_count": 4,
+      "distinctive_count_within_2mm": 0,
+      "distinctive_count_within_5mm": 0,
+      "distinctive_median_error_mm": 76.53353843270531,
+      "retained_count": 0,
+      "retained_count_within_2mm": 0,
+      "retained_count_within_5mm": 0,
+      "retained_median_error_mm": null
+    }
+  ],
+  "controls": {
+    "polar": {
+      "scope": "Same-modality histology control; independent detections, not oracle locations",
+      "mutual": 137,
+      "distinctive": 121,
+      "retained": 117,
+      "retained_within_2mm": 117,
+      "geometric_filter": {
+        "status": "estimated_model_not_anatomically_verified",
+        "minimum_consensus": 4,
+        "residual_threshold_histology_px": 6.0,
+        "seed": 0,
+        "max_trials": 5000,
+        "raw_consensus": 117,
+        "retained": 117,
+        "scale": 1.1506289141030488,
+        "clockwise_degrees": 20.015342220328396,
+        "translation_col_row_px": [
+          338.83925602972215,
+          60.728444770239605
+        ],
+        "matrix": [
+          [
+            1.081132082452723,
+            -0.39382777741215663,
+            338.83925602972215
+          ],
+          [
+            0.39382777741215663,
+            1.0811320824527233,
+            60.728444770239605
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    "mind": {
+      "scope": "Same-modality histology control; independent detections, not oracle locations",
+      "mutual": 109,
+      "distinctive": 70,
+      "retained": 65,
+      "retained_within_2mm": 65,
+      "geometric_filter": {
+        "status": "estimated_model_not_anatomically_verified",
+        "minimum_consensus": 4,
+        "residual_threshold_histology_px": 6.0,
+        "seed": 0,
+        "max_trials": 5000,
+        "raw_consensus": 65,
+        "retained": 65,
+        "scale": 1.1506560414974587,
+        "clockwise_degrees": 20.05526633356939,
+        "translation_col_row_px": [
+          339.10113961655014,
+          60.5132376166319
+        ],
+        "matrix": [
+          [
+            1.080882880417856,
+            -0.39459032508945285,
+            339.10113961655014
+          ],
+          [
+            0.39459032508945285,
+            1.080882880417856,
+            60.5132376166319
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    }
+  },
+  "candidates_identical": true,
+  "thresholds_unchanged": true,
+  "note": "One slice, six augmentations; runtimes descriptive, runs overlapped; no held-out validation"
+}

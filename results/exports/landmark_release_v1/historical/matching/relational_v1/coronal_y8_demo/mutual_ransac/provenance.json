@@ -1,0 +1,14 @@
+{
+  "source_prediction": "results/matching/relational_v1/coronal_y8_demo/mutual_ransac/predictions.npz",
+  "source_prediction_sha256": "21b7e2a77aed0500a0eed0cfc73c13c203b58261dd1adceb7782bb6b09e4dd31",
+  "score_source": "results/matching/mind_v1/coronal_y8_demo/predictions.npz",
+  "reference_geometry": "results/transforms/coronal_y8_demo/truth/geometry.json",
+  "evaluated_image_pair": "results/transforms/coronal_y8_demo/inputs.npz",
+  "source_evaluation": "results/matching/relational_v1/coronal_y8_demo/mutual_ransac/evaluation.json",
+  "csv_origin": "exported_from_saved_prediction",
+  "csv_sha256": "f3872f75c5c0114219e1fd3c860ed11532872d6dcc4700a1118b429fa9670429",
+  "source_modality": "mri",
+  "original_pairs": [],
+  "prediction_duplicate_of": "historical/matching/filter_ablation_v1/mind/coronal_y8_demo/all_mutual",
+  "note": "Rows are algorithm-retained predictions, including reference-incorrect pairs; no truth-conditioned filtering"
+}

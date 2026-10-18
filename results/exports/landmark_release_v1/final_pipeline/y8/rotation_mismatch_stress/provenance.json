@@ -1,0 +1,59 @@
+{
+  "source_prediction": "results/validation/rotation_mismatch_stress_v1/matching/stress/predictions.npz",
+  "source_prediction_sha256": "a6d4a0b898295a00a300362e16d1dea57bc06e6b2f329f716d8ed8eea098f281",
+  "score_source": "results/validation/rotation_mismatch_stress_v1/matching/stress/predictions.npz",
+  "reference_geometry": "results/validation/rotation_mismatch_stress_v1/pair/truth/geometry.json",
+  "evaluated_image_pair": "results/validation/rotation_mismatch_stress_v1/pair/inputs.npz",
+  "source_evaluation": "results/validation/rotation_mismatch_stress_v1/matching/stress/evaluation.json",
+  "csv_origin": "copied_existing_verified_csv",
+  "csv_sha256": "488133abb3709846f27623bec39a886ece77470fec0b74a71f2a0aaff4f01cc6",
+  "source_modality": "mri",
+  "original_pairs": [
+    [
+      1,
+      17
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      11,
+      15
+    ],
+    [
+      16,
+      136
+    ],
+    [
+      21,
+      6
+    ],
+    [
+      42,
+      54
+    ],
+    [
+      44,
+      83
+    ],
+    [
+      73,
+      10
+    ],
+    [
+      79,
+      73
+    ],
+    [
+      80,
+      110
+    ],
+    [
+      85,
+      29
+    ]
+  ],
+  "prediction_duplicate_of": null,
+  "note": "Rows are algorithm-retained predictions, including reference-incorrect pairs; no truth-conditioned filtering"
+}
